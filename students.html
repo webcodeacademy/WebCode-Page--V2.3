@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en" data-them="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script>
+        let localS = localStorage.getItem("Theme"),
+            themeToSet = localS
+        if (!localS) {
+            themeToSet = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+        }
+
+        document.documentElement.setAttribute("data-them", themeToSet)
+    </script>
+
+    <link rel="stylesheet" href="style/style.css">
+    <title>ვებკოდი | WebCode</title>
+    <link rel="icon" href="img/icony.png">
+</head>
+
+<body>
+    <header class="flex" id="header">
+        <h1>
+            <a href="index.html">
+                Webcode Academy ვებკოდი
+            </a>
+        </h1>
+        <div class="headerrightcorner flex">
+            <div class="navigation">
+                <div class="burgerbar flex" onclick="shownav()">
+                    <div class="burgerlines" id="bl1"></div>
+                    <div class="burgerlines bl2" id="bl2"></div>
+                    <div class="burgerlines bl3" id="bl3"></div>
+                </div>
+                <nav id="nav"></nav>
+            </div>
+            <div class="darklight" id="darklighticon"></div>
+        </div>
+    </header>
+    <main class="studentsmain">
+
+        <div class="students" id="students">
+            <p class="coursepagep">
+                თუ გაინტერესებს, მხოლოდ 12 შეხვედრის შემდეგ როგორ შედეგზე გახვალ, დაათვალიერე
+            </p>
+            <h2 class="coursepageh2">სტუდენტების ნამუშევრები</h2>
+            <p class="coursepagep">
+                შენ რომელი ნამუშევარი მოგწონს ყველაზე მეტად?
+            </p>
+
+
+        </div>
+        <p class="allprojects"><i>სულ <b>45</b>  პროექტი</i> </p>
+        <div class="studprojcontainer flex">
+
+            <div class="studprojcontitem">
+                <div class="studprojimage"><img src="img/students/mikheilgrigorian.png" alt="student project"></div>
+                <div class="studprojtext">
+                    <p class="studprojcourse"><i class="fa-solid fa-laptop-code"></i>ვებ პროგრამირების კურსი</p>
+                    <h4 class="studprojname">Dwayne Johnson Personal Page</h4>
+                    <p class="stutprojstudname">მიხეილ გრიგორიანი</p>
+                    <p class="stutprojdate">2022.01.21</p>
+                    <p><a href="https://webcodeacademy.github.io/mikheilGrigorian/" class="studprojlink"
+                            target="_blank">პროექტის მონახულება</a></p>
+                </div>
+            </div>
+            <div class="studprojcontitem">
+                <div class="studprojimage"><img src="img/students/giorgimalutashvili.png" alt="student project"></div>
+                <div class="studprojtext">
+                    <p class="studprojcourse"><i class="fa-solid fa-laptop-code"></i>ვებ პროგრამირების კურსი</p>
+                    <h4 class="studprojname">Awesome Tours In Georgia</h4>
+                    <p class="stutprojstudname">გიორგი მალუტაშვილი</p>
+                    <p class="stutprojdate">2022.04.29</p>
+                    <p><a href="https://webcodeacademy.github.io/giorgiMalutashvili/" class="studprojlink"
+                            target="_blank">პროექტის მონახულება</a></p>
+                </div>
+            </div>
+            <div class="studprojcontitem">
+                <div class="studprojimage"><img src="img/students/anastasiabogdanovi.png" alt="student project"></div>
+                <div class="studprojtext">
+                    <p class="studprojcourse"><i class="fa-solid fa-laptop-code"></i>ვებ პროგრამირების კურსი</p>
+                    <h4 class="studprojname">Wedding Day Planner</h4>
+                    <p class="stutprojstudname">ანასტასია ბოგდანოვი</p>
+                    <p class="stutprojdate">2022.06.06</p>
+                    <p><a href="https://webcodeacademy.github.io/anastasiaBogdanovi/" class="studprojlink"
+                            target="_blank">პროექტის მონახულება</a></p>
+                </div>
+            </div>
+            <div class="studprojcontitem">
+                <div class="studprojimage"><img src="img/students/dimitrigogatishvili.png" alt="student project"></div>
+                <div class="studprojtext">
+                    <p class="studprojcourse"><i class="fa-solid fa-laptop-code"></i>ვებ პროგრამირების კურსი</p>
+                    <h4 class="studprojname">Phoenix - ტექნიკის მაღაზია</h4>
+                    <p class="stutprojstudname">დიმიტრი გოგატიშვილი</p>
+                    <p class="stutprojdate">2022.06.28</p>
+                    <p><a href="https://webcodeacademy.github.io/dimitriGogatishvili/" class="studprojlink"
+                            target="_blank">პროექტის მონახულება</a></p>
+                </div>
+            </div>
+            <div class="studprojcontitem">
+                <div class="studprojimage"><img src="img/students/iraklipetriashvili.png" alt="student project"></div>
+                <div class="studprojtext">
+                    <p class="studprojcourse"><i class="fa-solid fa-laptop-code"></i>ვებ პროგრამირების კურსი</p>
+                    <h4 class="studprojname">Home Pets - friendly animals</h4>
+                    <p class="stutprojstudname">ირაკლი პეტრიაშვილი</p>
+                    <p class="stutprojdate">2022.07.22</p>
+                    <p><a href="https://webcodeacademy.github.io/irakliPetriashvili/" class="studprojlink"
+                            target="_blank">პროექტის მონახულება</a></p>
+                </div>
+            </div>
+            <div class="studprojcontitem">
+                <div class="studprojimage"><img src="img/students/gujakhelashvili.png" alt="student project"></div>
+                <div class="studprojtext">
+                    <p class="studprojcourse"><i class="fa-solid fa-laptop-code"></i>ვებ პროგრამირების კურსი</p>
+                    <h4 class="studprojname">გემრიელობა - Pizza & Burger Store</h4>
+                    <p class="stutprojstudname">გუჯა ხელაშვილი</p>
+                    <p class="stutprojdate">2022.08.26</p>
+                    <p><a href="https://webcodeacademy.github.io/gujaKhelashvili/" class="studprojlink"
+                            target="_blank">პროექტის მონახულება</a></p>
+                </div>
+            </div>
+            <div class="studprojcontitem">
+                <div class="studprojimage"><img src="img/students/lashagogua.png" alt="student project"></div>
+                <div class="studprojtext">
+                    <p class="studprojcourse"><i class="fa-solid fa-laptop-code"></i>ვებ პროგრამირების კურსი</p>
+                    <h4 class="studprojname">Groco - ახალი და ჯანსაღი პროდუქტები</h4>
+                    <p class="stutprojstudname">ლაშა გოგუა</p>
+                    <p class="stutprojdate">2022.08.26</p>
+                    <p><a href="https://webcodeacademy.github.io/lashaGogua/" class="studprojlink"
+                            target="_blank">პროექტის მონახულება</a></p>
+                </div>
+            </div>
+            <div class="studprojcontitem">
+                <div class="studprojimage"><img src="img/students/iraklijordania.png" alt="student project"></div>
+                <div class="studprojtext">
+                    <p class="studprojcourse"><i class="fa-solid fa-laptop-code"></i>ვებ პროგრამირების კურსი</p>
+                    <h4 class="studprojname">Irakli Zhordania Personal Page</h4>
+                    <p class="stutprojstudname">ირაკლი ჟორდანია</p>
+                    <p class="stutprojdate">2022.08.27</p>
+                    <p><a href="https://sphynxo.io/?fbclid=IwAR03HPPxEmaRALNOt7GOosxiqEF6vJKJOwXz-yGeqTlrJyCKwgftpaT_vns"
+                            class="studprojlink" target="_blank">პროექტის მონახულება</a></p>
+                </div>
+            </div>
+            <div class="studprojcontitem">
+                <div class="studprojimage"><img src="img/students/nikushachelidze.png" alt="student project"></div>
+                <div class="studprojtext">
+                    <p class="studprojcourse"><i class="fa-solid fa-laptop-code"></i>ვებ პროგრამირების კურსი</p>
+                    <h4 class="studprojname">Lerika - ღვინის სარდაფი</h4>
+                    <p class="stutprojstudname">ნიკუშა ჭელიძე</p>
+                    <p class="stutprojdate">2022.08.27</p>
+                    <p><a href="https://webcodeacademy.github.io/nikushaChelidze/" class="studprojlink"
+                            target="_blank">პროექტის მონახულება</a></p>
+                </div>
+            </div>
+            <div class="studprojcontitem">
+                <div class="studprojimage"><img src="img/students/tornikeshvangiradze.png" alt="student project"></div>
+                <div class="studprojtext">
+                    <p class="studprojcourse"><i class="fa-solid fa-laptop-code"></i>ვებ პროგრამირების კურსი</p>
+                    <h4 class="studprojname">Cronatime - covid19 news</h4>
+                    <p class="stutprojstudname">თორნიკე შვანგირაძე</p>
+                    <p class="stutprojdate">2022.08.27</p>
+                    <p><a href="https://webcodeacademy.github.io/tornikeShvangiradze/" class="studprojlink"
+                            target="_blank">პროექტის მონახულება</a></p>
+                </div>
+            </div>
+            <div class="studprojcontitem">
+                <div class="studprojimage"><img src="img/students/aleqsandreseturidze.png" alt="student project"></div>
+                <div class="studprojtext">
+                    <p class="studprojcourse"><i class="fa-solid fa-laptop-code"></i>ვებ პროგრამირების კურსი</p>
+                    <h4 class="studprojname">Official apple store</h4>
+                    <p class="stutprojstudname">ალექსანდრე სეთურიძე</p>
+                    <p class="stutprojdate">2022.09.17</p>
+                    <p><a href="https://webcodeacademy.github.io/aleqsandreSeturidze/" class="studprojlink"
+                            target="_blank">პროექტის მონახულება</a></p>
+                </div>
+            </div>
+            <div class="studprojcontitem">
+                <div class="studprojimage"><img src="img/students/giorgigazashvili.png" alt="student project"></div>
+                <div class="studprojtext">
+                    <p class="studprojcourse"><i class="fa-solid fa-laptop-code"></i>ვებ პროგრამირების კურსი</p>
+                    <h4 class="studprojname">TechShop TS</h4>
+                    <p class="stutprojstudname">გიორგი გაზაშვილი</p>
+                    <p class="stutprojdate">2022.09.23</p>
+                    <p><a href="https://webcodeacademy.github.io/giorgiGazashvili/" class="studprojlink"
+                            target="_blank">პროექტის მონახულება</a></p>
+                </div>
+            </div>
+            <div class="studprojcontitem">
+                <div class="studprojimage"><img src="img/students/tornikekapanadze.png" alt="student project"></div>
+                <div class="studprojtext">
+                    <p class="studprojcourse"><i class="fa-solid fa-laptop-code"></i>ვებ პროგრამირების კურსი</p>
+                    <h4 class="studprojname">Import Tuner Inc.</h4>
+                    <p class="stutprojstudname">თორნიკე კაპანაძე</p>
+                    <p class="stutprojdate">2022.09.23</p>
+                    <p><a href="https://webcodeacademy.github.io/tornikeKapanadze/" class="studprojlink"
+                            target="_blank">პროექტის მონახულება</a></p>
+                </div>
+            </div>
+            <div class="studprojcontitem">
+                <div class="studprojimage"><img src="img/students/gogatsertsvadze.png" alt="student project"></div>
+                <div class="studprojtext">
+                    <p class="studprojcourse"><i class="fa-solid fa-laptop-code"></i>ვებ პროგრამირების კურსი</p>
+                    <h4 class="studprojname">myGO - Digital Services</h4>
+                    <p class="stutprojstudname">გოგა ცერცვაძე</p>
+                    <p class="stutprojdate">2022.09.23</p>
+                    <p><a href="https://webcodeacademy.github.io/gogaTsertsvadze/" class="studprojlink"
+                            target="_blank">პროექტის მონახულება</a></p>
+                </div>
+            </div>
+            <div class="studprojcontitem">
+                <div class="studprojimage"><img src="img/students/davitrigorian.png" alt="student project"></div>
+                <div class="studprojtext">
+                    <p class="studprojcourse"><i class="fa-solid fa-laptop-code"></i>ვებ პროგრამირების კურსი</p>
+                    <h4 class="studprojname">Beauty Salon</h4>
+                    <p class="stutprojstudname">დავით გრიგორიანი</p>
+                    <p class="stutprojdate">2022.09.23</p>
+                    <p><a href="https://webcodeacademy.github.io/davitGrigorian/" class="studprojlink"
+                            target="_blank">პროექტის მონახულება</a></p>
+                </div>
+            </div>
+            <div class="studprojcontitem">
+                <div class="studprojimage"><img src="img/students/veronikakopaliani.png" alt="student project"></div>
+                <div class="studprojtext">
+                    <p class="studprojcourse"><i class="fa-solid fa-laptop-code"></i>ვებ პროგრამირების კურსი</p>
+                    <h4 class="studprojname">San Francisco Hotel Viareggio</h4>
+                    <p class="stutprojstudname">ვერონიკა კოპალიანი</p>
+                    <p class="stutprojdate">2022.09.23</p>
+                    <p><a href="https://webcodeacademy.github.io/veronikaKopaliani/" class="studprojlink"
+                            target="_blank">პროექტის მონახულება</a></p>
+                </div>
+            </div>
+            <div class="studprojcontitem">
+                <div class="studprojimage"><img src="img/students/gagakupatadze.png" alt="student project"></div>
+                <div class="studprojtext">
+                    <p class="studprojcourse"><i class="fa-solid fa-laptop-code"></i>ვებ პროგრამირების კურსი</p>
+                    <h4 class="studprojname">Cars - Toyota, BMW, Mercedes</h4>
+                    <p class="stutprojstudname">გაგა კუპატაძე</p>
+                    <p class="stutprojdate">2022.09.23</p>
+                    <p><a href="https://webcodeacademy.github.io/gagaKupatadze/" class="studprojlink"
+                            target="_blank">პროექტის მონახულება</a></p>
+                </div>
+            </div>
+            <div class="studprojcontitem">
+                <div class="studprojimage"><img src="img/students/anamatchavariani.png" alt="student project"></div>
+                <div class="studprojtext">
+                    <p class="studprojcourse"><i class="fa-solid fa-laptop-code"></i>ვებ პროგრამირების კურსი</p>
+                    <h4 class="studprojname">Wine Shop</h4>
+                    <p class="stutprojstudname">ანა მაჭავარიანი</p>
+                    <p class="stutprojdate">2022.10.15</p>
+                    <p><a href="https://webcodeacademy.github.io/anaMatchavariani/" class="studprojlink"
+                            target="_blank">პროექტის მონახულება</a></p>
+                </div>
+            </div>
+            <div class="studprojcontitem">
+                <div class="studprojimage"><img src="img/students/nikagermanishvili.png" alt="student project"></div>
+                <div class="studprojtext">
+                    <p class="studprojcourse"><i class="fa-solid fa-laptop-code"></i>ვებ პროგრამირების კურსი</p>
+                    <h4 class="studprojname">Lit - პირველი ქართული გეიმ ბლოგი - lostinst.in</h4>
+                    <p class="stutprojstudname">ნიკა გერმანიშვილი</p>
+                    <p class="stutprojdate">2022.11.03</p>
+                    <p><a href="https://webcodeacademy.github.io/nikaGermanishvili/" class="studprojlink"
+                            target="_blank">პროექტის მონახულება</a></p>
+                </div>
+            </div>
+            <div class="studprojcontitem">
+                <div class="studprojimage"><img src="img/students/mariamiordanishvili.png" alt="student project"></div>
+                <div class="studprojtext">
+                    <p class="studprojcourse"><i class="fa-solid fa-laptop-code"></i>ვებ პროგრამირების კურსი</p>
+                    <h4 class="studprojname">საოჯახო სასტუმრო სანაპირო თელავში</h4>
+                    <p class="stutprojstudname">მარიამი იორდანიშვილი</p>
+                    <p class="stutprojdate">2022.11.04</p>
+                    <p><a href="https://webcodeacademy.github.io/mariamIordanishvili/" class="studprojlink"
+                            target="_blank">პროექტის მონახულება</a></p>
+                </div>
+            </div>
+            <div class="studprojcontitem">
+                <div class="studprojimage"><img src="img/students/jutadzigava.png" alt="student project"></div>
+                <div class="studprojtext">
+                    <p class="studprojcourse"><i class="fa-solid fa-laptop-code"></i>ვებ პროგრამირების კურსი</p>
+                    <h4 class="studprojname">Experimental Photography</h4>
+                    <p class="stutprojstudname">ჯუტა ძიგავა</p>
+                    <p class="stutprojdate">2022.11.19</p>
+                    <p><a href="https://webcodeacademy.github.io/jutaDzigava/" class="studprojlink"
+                            target="_blank">პროექტის მონახულება</a></p>
+                </div>
+            </div>
+            <div class="studprojcontitem">
+                <div class="studprojimage"><img src="img/students/giorgiodikadze.png" alt="student project"></div>
+                <div class="studprojtext">
+                    <p class="studprojcourse"><i class="fa-solid fa-laptop-code"></i>ვებ პროგრამირების კურსი</p>
+                    <h4 class="studprojname">Games & Computers Store</h4>
+                    <p class="stutprojstudname">გიორგი ოდიკაძე</p>
+                    <p class="stutprojdate">2022.11.19</p>
+                    <p><a href="https://webcodeacademy.github.io/giorgiOdikadze/" class="studprojlink"
+                            target="_blank">პროექტის მონახულება</a></p>
+                </div>
+            </div>
+            <div class="studprojcontitem">
+                <div class="studprojimage"><img src="img/students/dachigelenidze.png" alt="student project"></div>
+                <div class="studprojtext">
+                    <p class="studprojcourse"><i class="fa-solid fa-laptop-code"></i>ვებ პროგრამირების კურსი</p>
+                    <h4 class="studprojname">ფეხბურთის აკადემია</h4>
+                    <p class="stutprojstudname">დაჩი გელენიძე</p>
+                    <p class="stutprojdate">2022.11.19</p>
+                    <p><a href="https://webcodeacademy.github.io/dachiGelenidze/" class="studprojlink"
+                            target="_blank">პროექტის მონახულება</a></p>
+                </div>
+            </div>
+            <div class="studprojcontitem">
+                <div class="studprojimage"><img src="img/students/tomainasaridze.png" alt="student project"></div>
+                <div class="studprojtext">
+                    <p class="studprojcourse"><i class="fa-solid fa-laptop-code"></i>ვებ პროგრამირების კურსი</p>
+                    <h4 class="studprojname">ThomStore - ტექნიკის მაღაზია</h4>
+                    <p class="stutprojstudname">თომა ინასარიძე</p>
+                    <p class="stutprojdate">2022.11.19</p>
+                    <p><a href="https://webcodeacademy.github.io/tomaInasaridze/" class="studprojlink"
+                            target="_blank">პროექტის მონახულება</a></p>
+                </div>
+            </div>
+            <div class="studprojcontitem">
+                <div class="studprojimage"><img src="img/students/nikamakhatadze.png" alt="student project"></div>
+                <div class="studprojtext">
+                    <p class="studprojcourse"><i class="fa-solid fa-laptop-code"></i>ვებ პროგრამირების კურსი</p>
+                    <h4 class="studprojname">ყიდვა-გაყიდვა</h4>
+                    <p class="stutprojstudname">ნიკა მახათაძე</p>
+                    <p class="stutprojdate">2022.11.19</p>
+                    <p><a href="https://webcodeacademy.github.io/nikaMaxatadze/" class="studprojlink"
+                            target="_blank">პროექტის მონახულება</a></p>
+                </div>
+            </div>
+            <div class="studprojcontitem">
+                <div class="studprojimage"><img src="img/students/lukamshvidobadze.png" alt="student project"></div>
+                <div class="studprojtext">
+                    <p class="studprojcourse"><i class="fa-solid fa-laptop-code"></i>ვებ პროგრამირების კურსი</p>
+                    <h4 class="studprojname">Gameroom - Computer Accessories</h4>
+                    <p class="stutprojstudname">ლუკა მშვიდობაძე</p>
+                    <p class="stutprojdate">2022.11.19</p>
+                    <p><a href="https://webcodeacademy.github.io/lukaMshvidobadze/" class="studprojlink"
+                            target="_blank">პროექტის მონახულება</a></p>
+                </div>
+            </div>
+            <div class="studprojcontitem">
+                <div class="studprojimage"><img src="img/students/ninotsetskhladze.png" alt="student project"></div>
+                <div class="studprojtext">
+                    <p class="studprojcourse"><i class="fa-solid fa-laptop-code"></i>ვებ პროგრამირების კურსი</p>
+                    <h4 class="studprojname">Burger Bar</h4>
+                    <p class="stutprojstudname">ნინო ცეცხლაძე</p>
+                    <p class="stutprojdate">2022.11.19</p>
+                    <p><a href="https://webcodeacademy.github.io/ninoTsetskhladze/" class="studprojlink"
+                            target="_blank">პროექტის მონახულება</a></p>
+                </div>
+            </div>
+            <div class="studprojcontitem">
+                <div class="studprojimage"><img src="img/students/daniilbuligin.png" alt="student project"></div>
+                <div class="studprojtext">
+                    <p class="studprojcourse"><i class="fa-solid fa-laptop-code"></i>ვებ პროგრამირების კურსი</p>
+                    <h4 class="studprojname">Kindzmarauli Winery</h4>
+                    <p class="stutprojstudname">დანიილ ბულიგინი</p>
+                    <p class="stutprojdate">2022.11.19</p>
+                    <p><a href="https://webcodeacademy.github.io/daniilBuligini/" class="studprojlink"
+                            target="_blank">პროექტის მონახულება</a></p>
+                </div>
+            </div>
+            <div class="studprojcontitem">
+                <div class="studprojimage"><img src="img/students/levanimnaishvili.png" alt="student project"></div>
+                <div class="studprojtext">
+                    <p class="studprojcourse"><i class="fa-solid fa-laptop-code"></i>ვებ პროგრამირების კურსი</p>
+                    <h4 class="studprojname">Woof - Dog Service</h4>
+                    <p class="stutprojstudname">ლევან იმნაიშვილი</p>
+                    <p class="stutprojdate">2022.12.06</p>
+                    <p><a href="https://webcodeacademy.github.io/levanImnaishvili/" class="studprojlink"
+                            target="_blank">პროექტის მონახულება</a></p>
+                </div>
+            </div>
+            <div class="studprojcontitem">
+                <div class="studprojimage"><img src="img/students/giorgioniani.png" alt="student project"></div>
+                <div class="studprojtext">
+                    <p class="studprojcourse"><i class="fa-solid fa-laptop-code"></i>ვებ პროგრამირების კურსი</p>
+                    <h4 class="studprojname">Cinema - ფილმები უფასოდ</h4>
+                    <p class="stutprojstudname">გიორგი ონიანი</p>
+                    <p class="stutprojdate">2022.12.06</p>
+                    <p><a href="https://webcodeacademy.github.io/giorgiOniani/" class="studprojlink"
+                            target="_blank">პროექტის მონახულება</a></p>
+                </div>
+            </div>
+            <div class="studprojcontitem">
+                <div class="studprojimage"><img src="img/students/teonaabesadze.png" alt="student project"></div>
+                <div class="studprojtext">
+                    <p class="studprojcourse"><i class="fa-solid fa-laptop-code"></i>ვებ პროგრამირების კურსი</p>
+                    <h4 class="studprojname">ფერმა - ორგანული პროდუქტები</h4>
+                    <p class="stutprojstudname">თეონა აბესაძე</p>
+                    <p class="stutprojdate">2023.02.18</p>
+                    <p><a href="https://webcodeacademy.github.io/teonaAbesadze/" class="studprojlink"
+                            target="_blank">პროექტის მონახულება</a></p>
+                </div>
+            </div>
+            <div class="studprojcontitem">
+                <div class="studprojimage"><img src="img/students/giorgiqarumidze.png" alt="student project"></div>
+                <div class="studprojtext">
+                    <p class="studprojcourse"><i class="fa-solid fa-laptop-code"></i>ვებ პროგრამირების კურსი</p>
+                    <h4 class="studprojname">ხვიჩა კვარაცხელია</h4>
+                    <p class="stutprojstudname">გიორგი ქარუმიძე</p>
+                    <p class="stutprojdate">2023.02.18</p>
+                    <p><a href="https://webcodeacademy.github.io/giorgiQarumidze/" class="studprojlink"
+                            target="_blank">პროექტის მონახულება</a></p>
+                </div>
+            </div>
+            <div class="studprojcontitem">
+                <div class="studprojimage"><img src="img/students/tornikejabishvili.png" alt="student project"></div>
+                <div class="studprojtext">
+                    <p class="studprojcourse"><i class="fa-solid fa-laptop-code"></i>ვებ პროგრამირების კურსი</p>
+                    <h4 class="studprojname">Honda - Cars & more</h4>
+                    <p class="stutprojstudname">თორნიკე ჯაბიშვილი</p>
+                    <p class="stutprojdate">2023.02.18</p>
+                    <p><a href="https://webcodeacademy.github.io/tornikeJabishvili/" class="studprojlink"
+                            target="_blank">პროექტის მონახულება</a></p>
+                </div>
+            </div>
+            <div class="studprojcontitem">
+                <div class="studprojimage"><img src="img/students/giorgichaduneli.png" alt="student project"></div>
+                <div class="studprojtext">
+                    <p class="studprojcourse"><i class="fa-solid fa-laptop-code"></i>ვებ პროგრამირების კურსი</p>
+                    <h4 class="studprojname">Travel in Georgia</h4>
+                    <p class="stutprojstudname">გიორგი ჩადუნელი</p>
+                    <p class="stutprojdate">2023.02.18</p>
+                    <p><a href="https://webcodeacademy.github.io/giorgiChaduneli/" class="studprojlink"
+                            target="_blank">პროექტის მონახულება</a></p>
+                </div>
+            </div>
+            <div class="studprojcontitem">
+                <div class="studprojimage"><img src="img/students/ladikoniashvili.png" alt="student project"></div>
+                <div class="studprojtext">
+                    <p class="studprojcourse"><i class="fa-solid fa-laptop-code"></i>ვებ პროგრამირების კურსი</p>
+                    <h4 class="studprojname">Disnep World</h4>
+                    <p class="stutprojstudname">ლადი კონიაშვილი</p>
+                    <p class="stutprojdate">2023.02.18</p>
+                    <p><a href="https://webcodeacademy.github.io/ladiKoniashvili/" class="studprojlink"
+                            target="_blank">პროექტის მონახულება</a></p>
+                </div>
+            </div>
+            <div class="studprojcontitem">
+                <div class="studprojimage"><img src="img/students/uchanadaraia.png" alt="student project"></div>
+                <div class="studprojtext">
+                    <p class="studprojcourse"><i class="fa-solid fa-laptop-code"></i>ვებ პროგრამირების კურსი</p>
+                    <h4 class="studprojname">Concept Store</h4>
+                    <p class="stutprojstudname">უჩა ნადარაია</p>
+                    <p class="stutprojdate">2023.02.18</p>
+                    <p><a href="https://webcodeacademy.github.io/uchaNadaraia/" class="studprojlink"
+                            target="_blank">პროექტის მონახულება</a></p>
+                </div>
+            </div>
+            <div class="studprojcontitem">
+                <div class="studprojimage"><img src="img/students/gegaadeishvili.png" alt="student project"></div>
+                <div class="studprojtext">
+                    <p class="studprojcourse"><i class="fa-solid fa-laptop-code"></i>ვებ პროგრამირების კურსი</p>
+                    <h4 class="studprojname">Hard Way სპორტ დარბაზი</h4>
+                    <p class="stutprojstudname">გეგა ადეიშვილი</p>
+                    <p class="stutprojdate">2023.02.18</p>
+                    <p><a href="https://webcodeacademy.github.io/gegaAdeishvili/" class="studprojlink"
+                            target="_blank">პროექტის მონახულება</a></p>
+                </div>
+            </div>
+            <div class="studprojcontitem">
+                <div class="studprojimage"><img src="img/students/lizisakhokia.png" alt="student project"></div>
+                <div class="studprojtext">
+                    <p class="studprojcourse"><i class="fa-solid fa-laptop-code"></i>ვებ პროგრამირების კურსი</p>
+                    <h4 class="studprojname">Comics Store</h4>
+                    <p class="stutprojstudname">ლიზი სახოკია</p>
+                    <p class="stutprojdate">2023.03.06</p>
+                    <p><a href="https://webcodeacademy.github.io/liziSakhokia/" class="studprojlink"
+                            target="_blank">პროექტის მონახულება</a></p>
+                </div>
+            </div>
+            <div class="studprojcontitem">
+                <div class="studprojimage"><img src="img/students/tikomalania.png" alt="student project"></div>
+                <div class="studprojtext">
+                    <p class="studprojcourse"><i class="fa-solid fa-laptop-code"></i>ვებ პროგრამირების კურსი</p>
+                    <h4 class="studprojname">Astrology</h4>
+                    <p class="stutprojstudname">თიკო მალანია</p>
+                    <p class="stutprojdate">2023.03.06</p>
+                    <p><a href="https://webcodeacademy.github.io/tikoMalania/" class="studprojlink"
+                            target="_blank">პროექტის მონახულება</a></p>
+                </div>
+            </div>
+            <div class="studprojcontitem">
+                <div class="studprojimage"><img src="img/students/lukamaisuradze.png" alt="student project"></div>
+                <div class="studprojtext">
+                    <p class="studprojcourse"><i class="fa-solid fa-laptop-code"></i>ვებ პროგრამირების კურსი</p>
+                    <h4 class="studprojname">sweethouse.com - agency</h4>
+                    <p class="stutprojstudname">ლუკა მაისურაძე</p>
+                    <p class="stutprojdate">2023.03.15</p>
+                    <p><a href="https://webcodeacademy.github.io/lukaMaisuradze/" class="studprojlink"
+                            target="_blank">პროექტის მონახულება</a></p>
+                </div>
+            </div>
+            <div class="studprojcontitem">
+                <div class="studprojimage"><img src="img/students/davitgogilashvili.png" alt="student project"></div>
+                <div class="studprojtext">
+                    <p class="studprojcourse"><i class="fa-solid fa-laptop-code"></i>ვებ პროგრამირების კურსი</p>
+                    <h4 class="studprojname">Tours around Georgia</h4>
+                    <p class="stutprojstudname">დავით გოგილაშვილი</p>
+                    <p class="stutprojdate">2023.03.18</p>
+                    <p><a href="https://webcodeacademy.github.io/davitGogilashvili/" class="studprojlink"
+                            target="_blank">პროექტის მონახულება</a></p>
+                </div>
+            </div>
+            <div class="studprojcontitem">
+                <div class="studprojimage"><img src="img/students/lukaqistauri.png" alt="student project"></div>
+                <div class="studprojtext">
+                    <p class="studprojcourse"><i class="fa-solid fa-laptop-code"></i>ვებ პროგრამირების კურსი</p>
+                    <h4 class="studprojname">KhvLickAnime</h4>
+                    <p class="stutprojstudname">ლუკა ქისტაური</p>
+                    <p class="stutprojdate">2023.03.18</p>
+                    <p><a href="https://webcodeacademy.github.io/lukaQistauri/" class="studprojlink"
+                            target="_blank">პროექტის მონახულება</a></p>
+                </div>
+            </div>
+            <div class="studprojcontitem">
+                <div class="studprojimage"><img src="img/students/mariamasbesadze.png" alt="student project"></div>
+                <div class="studprojtext">
+                    <p class="studprojcourse"><i class="fa-solid fa-laptop-code"></i>ვებ პროგრამირების კურსი</p>
+                    <h4 class="studprojname">Amusement Park</h4>
+                    <p class="stutprojstudname">მარიამ აბესაძე</p>
+                    <p class="stutprojdate">2023.03.19</p>
+                    <p><a href="https://webcodeacademy.github.io/mariamAbesadze/" class="studprojlink"
+                            target="_blank">პროექტის მონახულება</a></p>
+                </div>
+            </div>
+            <div class="studprojcontitem">
+                <div class="studprojimage"><img src="img/students/maritapartsikanashvili.png" alt="student project">
+                </div>
+                <div class="studprojtext">
+                    <p class="studprojcourse"><i class="fa-solid fa-laptop-code"></i>ვებ პროგრამირების კურსი</p>
+                    <h4 class="studprojname">Omnifood </h4>
+                    <p class="stutprojstudname">მარიტა პარწიკანაშვილი</p>
+                    <p class="stutprojdate">2023.03.20</p>
+                    <p><a href="https://webcodeacademy.github.io/maritaPartsikanashvili/" class="studprojlink"
+                            target="_blank">პროექტის მონახულება</a></p>
+                </div>
+            </div>
+            <div class="studprojcontitem">
+                <div class="studprojimage"><img src="img/students/mikheilbabunashvili.png" alt="student project"></div>
+                <div class="studprojtext">
+                    <p class="studprojcourse"><i class="fa-solid fa-laptop-code"></i>ვებ პროგრამირების კურსი</p>
+                    <h4 class="studprojname">Gun Shop</h4>
+                    <p class="stutprojstudname">მიხეილი ბაბუნაშვილი</p>
+                    <p class="stutprojdate">2023.03.20</p>
+                    <p><a href="https://webcodeacademy.github.io/mikheilBabunashvili/" class="studprojlink"
+                            target="_blank">პროექტის მონახულება</a></p>
+                </div>
+            </div>
+            <div class="studprojcontitem">
+                <div class="studprojimage"><img src="img/students/salomenebieridze.png" alt="student project"></div>
+                <div class="studprojtext">
+                    <p class="studprojcourse"><i class="fa-solid fa-laptop-code"></i>ვებ პროგრამირების კურსი</p>
+                    <h4 class="studprojname">NeuroScape</h4>
+                    <p class="stutprojstudname">სალომე ნებიერიძე</p>
+                    <p class="stutprojdate">2023.03.20</p>
+                    <p><a href="https://webcodeacademy.github.io/salomeNebieridze/" class="studprojlink"
+                            target="_blank">პროექტის მონახულება</a></p>
+                </div>
+            </div>
+
+
+
+        </div>
+
+
+    </main>
+
+
+    <footer class="flex">
+        <div class="footerstart">
+            <div class="footerlogo">
+                <a href="index.html">WebCode Academy Web Development Courses</a>
+            </div>
+            <nav id="footernav"></nav>
+        </div>
+        <div class="footercontact">
+            <h2>კონტაქტი</h2>
+            <p>ბ.ჟღენტის 45, თბილისი</p>
+            <p>ტელ. <a href="tel: +995591682030">591682030</a> </p>
+            <p>ელ.ფოსტა: <a href="mailto: webcodeacademyinfo@gmail.com" target="_blank">
+                    webcodeacademyinfo@gmail.com
+                </a> </p>
+        </div>
+        <div class="follow">
+            <h2>გამომყევი</h2>
+            <div class="socialmedia flex">
+                <a href="#">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+            </div>
+        </div>
+        <p class="coursesbutton">
+            <a href="register.html"> კურსზე დარეგისტრირება</a>
+
+        </p>
+        <p class="arr"><i class="fa-regular fa-copyright"></i> ყველა უფლება დაცულია</p>
+        <p class="arr">2023 | თბილისი</p>
+    </footer>
+    <script>
+
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+        integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://kit.fontawesome.com/389a230baf.js" crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/navscroll.js"></script>
+    <script src="js/darklight.js"></script>
+    <script src="js/footernav.js"></script>
+    <script src="js/shownav.js"></script>
+</body>
+
+
+</html>

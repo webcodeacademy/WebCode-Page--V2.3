@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en" data-them="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script>
+        let localS = localStorage.getItem("Theme"),
+            themeToSet = localS
+        if (!localS) {
+            themeToSet = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+        }
+
+        document.documentElement.setAttribute("data-them", themeToSet)
+    </script>
+
+    <link rel="stylesheet" href="style/style.css">
+    <title>ვებკოდი | WebCode</title>
+    <link rel="icon" href="img/icony.png">
+</head>
+
+<body>
+    <header class="flex" id="header">
+        <h1>
+            <a href="index.html">
+                Webcode Academy ვებკოდი
+            </a>
+        </h1>
+        <div class="headerrightcorner flex">
+            <div class="navigation">
+                <div class="burgerbar flex" onclick="shownav()">
+                    <div class="burgerlines" id="bl1"></div>
+                    <div class="burgerlines bl2" id="bl2"></div>
+                    <div class="burgerlines bl3" id="bl3"></div>
+                </div>
+                <nav id="nav"></nav>
+            </div>
+            <div class="darklight" id="darklighticon"></div>
+        </div>
+    </header>
+    <main class="aboutmain">
+        <h2 class="coursedesc">ვებ პროგრამირების კურსი</h2>
+
+        <div class="greeting">
+            <div class="greetingtext">
+                <!-- <h2>ვინ იქნება შენი მენტორი?</h2> -->
+                <div class="flex lecturerinfo">
+                    <div class="greetingvideo">
+                        <video src="videos/me.mp4" autoplay muted loop></video>
+                    </div>
+                    <div class="lecturer">
+                        <p>სალომე გაჩეჩლაძე</p>
+                        <p>
+                            <i> "Front-end დეველოპმენტის საბაზისო კურსის განმავლობაში ვიქნები შენი მასწავლებელი,
+                                მეგობარი და
+                                მრჩეველი. მაქსიმალურად ვეცდები ინტენსიური კურსის განმავლობაში გაგიზიარო ჩემს მიერ
+                                დაგროვილი ცოდნა,
+                                გამოცდილება და ინფორმაცია."</i>
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="lecturerbio flex">
+            <div class="bio about">
+                <h2>გამოცდილება</h2>
+                <div class="biotext">
+
+                    <p>
+                        ვებ დეველოპმენტის სფეროში 2017 წლიდან ვარ. ამ პერიოდის განმავლობაში ვმუშაობდი როგორც Front-end
+                        Web
+                        Developer სხვადახვა კომპანიებში, მათ შორის Dorado Development, National Geographic Georgia და
+                        მისთ.
+                    </p>
+                    <p>
+                        პარალელურად ვცდილობ ჩემი ცოდნა გავუზიარო დამწყებ დეველოპერებს და სწორი მიმართულება მივცე
+                        განვითარებისთვის. სხვადასხვა პერიოდში მიმუშავია საპასუხისმგებლო პოზიციებზე:
+                    </p>
+
+                    <ul>
+                        <li>ვებ დეველოპმენტის (HTML, CSS, JS) მენტორი <a href="#">(ციფრული ინდუსტრიის აკადმია)</a></li>
+                        <li>ვებ დეველოპმენტის ლექტორი<a href="#">(ჯეოლაბი)</a></li>
+                        <li>ვებ დეველოპმენტის კურსის ხელმძღვანელი<a href="#">(კრეატიული ტექნოლოგიების ცენტრი)</a></li>
+                        <li>მიწვეული პედაგოგი ვებ პროგრამირების მიმართულებით<a href="#">(თბილისის სახელმწიფო
+                                უნივერსიტეტი)</a></li>
+                        <li>ინგლისური ენის პედაგოგი<a href="">(იტალია, ITCG BAGGI)</a></li>
+                    </ul>
+                    <p>
+                        ჩემი თვითმიზანი დამწყები ვებ დეველოპერებისთვის სწორი მიმართულების ჩვენებაა. მაქსიმალურად ვცდილობ
+                        ყველა სტუდენტს მივუდგე ინდივიდუალურად და მისი მცირე მოტივაცია, გახდეს ვებ დეველოპერი, სიოსაგან
+                        ქარიშხლად ვაქციო.
+                    </p>
+                </div>
+            </div>
+
+            <div class="about">
+                <h2>განათლება</h2>
+                <div class="education">
+                    <div class="educationitem">
+                        <div class="educatoinline"></div>
+                        <h3>CS50x სერტიფიცირებული კურსი <a href="pdfs/CS50x.pdf" target="_blank"><i
+                                    class="fa-solid fa-paperclip"></i></a></h3>
+                        <p>Cambridge, Massachusetts</p>
+                        <p>2023-2023</p>
+                    </div>
+
+                    <div class="educationitem">
+                        <div class="educatoinline"></div>
+                        <h3>ბაკალავრი კომპიუტერულ მეცნიერებებში <a href="pdfs/bachelorsdiplomasalomegachechiladze.pdf"
+                                target="_blank"><i class="fa-solid fa-paperclip"></i></a></h3>
+                        <p>ივ.ჯავახიშვილის სახელობის თბილისის სახელმწიფო უნივერსიტეტი</p>
+                        <p>2015-2019</p>
+                    </div>
+
+                    <div class="educationitem">
+                        <div class="educatoinline"></div>
+                        <h3>UI/UX დიზაინერი <a href="pdfs/uiuxdesigncoursesertificate.pdf" target="_blank"><i
+                                    class="fa-solid fa-paperclip"></i></a></h3>
+                        <p>ციფრული ინდუსტრიის აკადემია</p>
+                        <p>2020-2020</p>
+                    </div>
+
+                    <div class="educationitem">
+                        <div class="educatoinline"></div>
+                        <h3>გრაფიკული დიზაინერი <a href="pdfs/CERTIFICATE OF.pdf" target="_blank"><i
+                                    class="fa-solid fa-paperclip"></i></a></h3>
+                        <p>ციფრული ინდუსტრიის აკადემია</p>
+                        <p>2019-2019</p>
+                    </div>
+
+                    <div class="educationitem">
+                        <div class="educatoinline"></div>
+                        <h3>პროფესიონალი ვებ ინტერფეისის დეველოპერი <a href="pdfs/diplomasalomegachechiladze.pdf"
+                                target="_blank"><i class="fa-solid fa-paperclip"></i></a></h3>
+                        <p>ინფორმაციული ტექნოლოგიების აკადემია</p>
+                        <p>2017-2018</p>
+                    </div>
+
+                    <div class="educationitem">
+                        <div class="educatoinline"></div>
+                        <h3>ASP.NET MVC დეველოპერი <a href="pdfs/geolab.pdf" target="_blank"><i
+                                    class="fa-solid fa-paperclip"></i></a></h3>
+                        <p>ჯეოლაბი</p>
+                        <p>2017-2018</p>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+
+        <div class="courses" id="aboutme">
+            <div class="coursestext">
+                <h2>გაინტერესებს რას გასწავლი კურსის განმავლობაში?</h2>
+                <p>
+                    თუ შენს გარშემო ყველა პროგრამირებას სწავლობს და შენც გინდა საკუთარი შესაძლებლობი გამოსცადო ამ
+                    სფროში, მაშინ გილოცავ! სწორ ადგილას მოხვდი.
+                    <i class="mycourse">ჩემი კურსის ფარგლებში შენ ისწავლი:</i>
+                </p>
+                <p class="tostudy">
+                    <span class="webdevintern">ვებ დეველოპმენტის საფუძვლებს</span>
+                    <span class="markuplanguages">markup ენებს, როგორიცაა: HTML და CSS</span>
+                    <span class="programlanguages">პროგრამირების ენას JavaScript</span>
+                    <span class="versioncontrol">ვერსიების კონტროლის სისტემასთან, GitHub-თან მუშაობას</span>
+                    <span class="bootstrap">ყველაზე ხშირად გამოყენებად ბიბლიოთეკას Bootstrap-ს</span>
+                    <span class="designs">დიზაინის გარჩევას Figma-ში და მასთან მუშაობას</span>
+                    <br>შენ აღამოაჩენ ვებ გვერდების სამყაროს და ბოლოს და ბოლოს გაიგებ, ნამდვილად გინდა თუ არა ეს ცნობილი
+                    "ვებ დეველოპერობა"?
+                </p>
+
+                <!-- <p>
+                   <a href="aboutme.html" class="aboutme">გაიგე მეტი მენტორის შესახებ</a> 
+                </p> -->
+            </div>
+            <div class="courseslist flex">
+                <div class="courseitem">
+                    <h2>
+                        HTML
+                    </h2>
+                    <div class="courseimage">
+                        <img src="img/html.png" alt="html, webcode, html course, html kursi">
+                    </div>
+                    <p>
+                        ისწავლი HTML5-ის თანამდეროვე თეგებს და შეგეძლება გაარჩიო ისინი ძველი სტილის თეგებისგან. თავად
+                        შეძლებ შექმნა ნებისმიერი სირთულის სტრუქტურის გვერდი.
+                    </p>
+                </div>
+
+                <div class="courseitem">
+                    <h2>
+                        CSS
+                    </h2>
+                    <div class="courseimage">
+                        <img src="img/css.png" alt="css, webcode, css course, css kursi">
+                    </div>
+                    <p>
+                        ისწავლი CSS3-ის ძირითად პრინციპებს. გაიგებ ისეთი თანამდეროვე გასტილვის ხელსაწყოების შესახებ
+                        როგორიცაა: Grid, Flex და სხვა...
+                    </p>
+                </div>
+
+                <div class="courseitem">
+                    <h2>
+                        JavaScript
+                    </h2>
+                    <div class="courseimage">
+                        <img src="img/js.jpg" alt="js, webcode, js course, js kursi">
+                    </div>
+                    <p>
+                        ისწავლი JavaScript6-ის ანუ ES6-ის საწყისებს. გაეცნობი პროგრამირების ენას და აითვისებ
+                        ოპერატორებს, ციკლებს, პირობით გამოსახულებებს. ფიქრს ლოგიკურად დაიწყებ და ვებ გვერდს დინამიურობას
+                        შესძენ შენი ძალებით.
+                    </p>
+                </div>
+
+                <div class="courseitem">
+                    <h2>
+                        GitHib, Git
+                    </h2>
+                    <div class="courseimage">
+                        <img src="img/git.png" alt="git, webcode, git course, git kursi, github">
+                    </div>
+                    <p>
+                        პროექტს ატვირთავ სივრცეში, სადაც გააკონტოლებ მის ვერსიებსა და განვითარებას. შეძლებ შექმნა ლაივ
+                        ლინკი და მთელ სამყაროს წარუდგინო პროექტი. ისწავლის გითჰაბზე რეპოს შექმნას, პროექტის ატვირთვა
+                        ჩამოტვირთვას და სხვა.
+                    </p>
+                </div>
+
+                <div class="courseitem">
+                    <h2>
+                        BOOTSTRAP
+                    </h2>
+                    <div class="courseimage btstrp">
+                        <img src="img/bootstrap.png"
+                            alt="bootstrap, webcode, bootstrap course, bootstrap kursi, bootstrap">
+                    </div>
+                    <p>
+                        ბუტსტრაპი ერთ-ერთი ყველაზე ხშირად გამოყენებადი HTML-სა და CSS-ის framework-ია და მისი ცოდნა
+                        დაგიზოგავს დროსა და ენერგიას ვებ გვერდის აწყობის პროცესში. ბუტსტრაპის დახმარებით შენ ააწყობ
+                        მოქნილ და ნებისმიერი სირთულის დიზაინის გვერდებს.
+                    </p>
+                </div>
+
+                <div class="courseitem">
+                    <h2>
+                        FIGMA
+                    </h2>
+                    <div class="courseimage">
+                        <img src="img/figma.png" alt="figma, webcode, figma course, figma kursi, figma">
+                    </div>
+                    <p>
+                        Figma არის UI/UX დიზინის შესაქმნელად ყველაზე ხშირად გამოყენებადი აპლიკაცია. იცოდი, რომ ვებ
+                        დიზაინერები სწორედ ფიგმას ფაილის მიხედვით გიგზავნიან იმ ვებ გვერდის დიზაინს, რომელიც უნდა ააწყო?
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+
+        
+
+
+
+
+        <div class="coursedescription" id="silabusi">
+            <h2 class="silabusi">სილაბუსი</h2>
+
+            <div class="sillabusitem">
+                <div class="showsillabustheme flex" onclick="showtheme('theme1')">
+                    <p class="week">სემინარი 1 - შესავალი HTML-ში</p>
+                    <p class="arrow"><i class="fa-solid fa-chevron-down"></i></p>
+                </div>
+                <div class="theme"  id="theme1">
+                    <ul class="themelist">
+                        <li>ვებ გვერდის მუშაობის პრინციპი</li>
+                        <li>ედიტორების გარჩევა კოდის წერისთვის</li>
+                        <li>HTML-ის ანატომია</li>
+                        <li>ფაილებისა და ფოლდერების ორგანიზება პროექტისთვის</li>
+                        <li>HTML თეგების შემოტანა</li>
+                        <li>Chrome Devtools</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="sillabusitem">
+                <div class="showsillabustheme flex" onclick="showtheme('theme2')">
+                    <p class="week">სემინარი 2 - შესავალი CSS-ში</p>
+                    <p class="arrow"><i class="fa-solid fa-chevron-down"></i></p>
+                </div>
+                <div class="theme"  id="theme2">
+                    <ul class="themelist">
+                        <li>სტილების ფაილის შემოტანა (CSS)</li>
+                        <li>ბმულის ასახვა ვებ გვერდზე</li>
+                        <li>რელატიური კავშირი HTML ელემენტებს შორის</li>
+                        <li>HTML ატრიბუტები</li>
+                        <li>სტილებთან მუშაობა</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="sillabusitem">
+                <div class="showsillabustheme flex" onclick="showtheme('theme3')">
+                    <p class="week">სემინარი 3 - CSS ბოქს მოდელი და ტექტის ფორმატები</p>
+                    <p class="arrow"><i class="fa-solid fa-chevron-down"></i></p>
+                </div>
+                <div class="theme"  id="theme3">
+                    <ul class="themelist">
+                        <li>CSS ბოქს მოდელი</li>
+                        <li>HTML / CSS კომენტარი</li>
+                        <li>ფსევდო კლასები ტექსტის ფორმატირებისთვის</li>
+                        <li>ტექსტის სტლებთან/ფონტებთან მუშაობა</li>
+                        <li>სურათის ასახვა</li>
+                        <li>კოდის ვალიდაცია</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="sillabusitem">
+                <div class="showsillabustheme flex" onclick="showtheme('theme4')">
+                    <p class="week">სემინარი 4 - დიზაინი და ელემენტების ჰორიზონტალური წყობა</p>
+                    <p class="arrow"><i class="fa-solid fa-chevron-down"></i></p>
+                </div>
+                <div class="theme"  id="theme4">
+                    <ul class="themelist">
+                        <li>FIGMA-ში მუშაობის პრინციპები</li>
+                        <li>ბლოკური და ხაზოვანი ელემენტები</li>
+                        <li>ნავიგაციის შემოტანა</li>
+                        <li>ელემენტების ჰორიზონტალურად განლაგება - float</li>
+                        <li>ბრაუზერის სტილების განულება - reset css</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="sillabusitem">
+                <div class="showsillabustheme flex" onclick="showtheme('theme5')">
+                    <p class="week">სემინარი 5 - ფსევდო კლასები და სტილები</p>
+                    <p class="arrow"><i class="fa-solid fa-chevron-down"></i></p>
+                </div>
+                <div class="theme"  id="theme5">
+                    <ul class="themelist">
+                        <li>ფსევდო კლასები</li>
+                        <li>border, border radius, tranform property</li>
+                        <li>ჩრდილები - box-shadow / text-shadow</li>
+                        <li>background image და მისი მართვის პარამეტრები</li>
+                        <li>HTML ელემენტის პოზიციონირება</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="sillabusitem">
+                <div class="showsillabustheme flex" onclick="showtheme('theme6')">
+                    <p class="week">სემინარი 6 - FLEXBOX</p>
+                    <p class="arrow"><i class="fa-solid fa-chevron-down"></i></p>
+                </div>
+                <div class="theme"  id="theme6">
+                    <ul class="themelist">
+                        <li>აიქონების შემოტანა  სურათად და ტექსტად</li>
+                        <li>ჰოვერის ეფექტი</li>
+                        <li>transition property</li>
+                        <li>keyframe ანიმაციები</li>
+                        <li>flexbox-ის გარჩევა</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="sillabusitem">
+                <div class="showsillabustheme flex" onclick="showtheme('theme7')">
+                    <p class="week">სემინარი 7 - github</p>
+                    <p class="arrow"><i class="fa-solid fa-chevron-down"></i></p>
+                </div>
+                <div class="theme"  id="theme7">
+                    <ul class="themelist">
+                        <li>Parallax Effect</li>
+                        <li>git - ვერსიების კონტროლის სისტემა - მუშაობის პრინციპი</li>
+                        <li>github-ზე რეგიტრაცია</li>
+                        <li>რეპოსიტორის შექმნა, პროექტის ატვირთვა/ჩამოტვირთვა, ცვლილებების შეტანა</li>
+                        <li>პროექტის აბსოლუტური მისამართის გენერირება</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="sillabusitem">
+                <div class="showsillabustheme flex" onclick="showtheme('theme8')">
+                    <p class="week">სემინარი 8 - რესფონსივი, ფორმები</p>
+                    <p class="arrow"><i class="fa-solid fa-chevron-down"></i></p>
+                </div>
+                <div class="theme"  id="theme8">
+                    <ul class="themelist">
+                        <li>ვებ გვერდის რესფონსიული წყობა</li>
+                        <li>breakpoints, toggle device toolbar</li>
+                        <li>autoprefixer-ის დამატება</li>
+                        <li>ფორმები და მისი მართვის პარამეტრები</li>
+                        <li>სარეგისტრაციო ფორმის აწყობა</li>
+                        <li>action გვერდის დამატება</li>
+                        
+                    </ul>
+                </div>
+            </div>
+
+            <div class="sillabusitem">
+                <div class="showsillabustheme flex" onclick="showtheme('theme9')">
+                    <p class="week">სემინარი 9 - Bootstrap</p>
+                    <p class="arrow"><i class="fa-solid fa-chevron-down"></i></p>
+                </div>
+                <div class="theme"  id="theme9">
+                    <ul class="themelist">
+                        <li>Bootstrap-ის შესავალი, ნავიგაცია</li>
+                        <li>Bootstrap-ის ელემენტები - modal, collapse, </li>
+                        <li>Bootstrap კარუსელი</li>
+                        <li>Bootstrap ჩამოსაშლელი მენიუ</li>
+                        <li>Bootstrap ტაბები</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="sillabusitem">
+                <div class="showsillabustheme flex" onclick="showtheme('theme10')">
+                    <p class="week">სემინარი 10 - SEO ოპტიმიზაცია და css grid</p>
+                    <p class="arrow"><i class="fa-solid fa-chevron-down"></i></p>
+                </div>
+                <div class="theme"  id="theme10">
+                    <ul class="themelist">
+                        <li>ფსევდო ელემენტები</li>
+                        <li>css grid layout</li>
+                        <li>SEO - ინფორმაციის ოპტიმიზაცია საძიებო სისტემებისთვის</li>
+                        <li>meta თეგები სოციალური ქსელებისთვის</li>
+                        <li>სლაიდერის შემოტანა</li>
+                        <li>რუკის შემოტანა</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="sillabusitem">
+                <div class="showsillabustheme flex" onclick="showtheme('theme11')">
+                    <p class="week">სემინარი 11 - შესავალი ჯავასკრიპტში</p>
+                    <p class="arrow"><i class="fa-solid fa-chevron-down"></i></p>
+                </div>
+                <div class="theme"  id="theme11">
+                    <ul class="themelist">
+                        <li>ჯავასკრიპტის ფაილების ორგანიზება</li>
+                        <li>ცვლადები და მონაცემთა ტიპები და ტიპების კონვერტაცია</li>
+                        <li>ლოკალური და გლობალური გამომცხადებლები</li>
+                        <li>ოპერატორები, კონკატენაცია, ინკრემენტი, დეკრემენტი</li>
+                        <li>while და for ციკლები</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="sillabusitem">
+                <div class="showsillabustheme flex" onclick="showtheme('theme12')">
+                    <p class="week">სემინარი 12 - switch და DOM</p>
+                    <p class="arrow"><i class="fa-solid fa-chevron-down"></i></p>
+                </div>
+                <div class="theme"  id="theme12">
+                    <ul class="themelist">
+                        <li>switch ოპერატორი</li>
+                        <li>string და tring-ის მეთოდები</li>
+                        <li>მარტივი კალკულატორის შექმნა</li>
+                        <li>Document Object Model - DOM</li>
+                        <li>DOM მანიპულაციები</li>
+                        <li>მარტივი ნავიგაციის გამოტანა ჯავასკრიპტიდან</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="sillabusitem">
+                <div class="showsillabustheme flex" onclick="showtheme('theme13')">
+                    <p class="week">სემინარი 13 - მასივები</p>
+                    <p class="arrow"><i class="fa-solid fa-chevron-down"></i></p>
+                </div>
+                <div class="theme"  id="theme13">
+                    <ul class="themelist">
+                        <li>html ელემენტებთან მუშაობა</li>
+                        <li>პირობითი გამოსახულება</li>
+                        <li>მასივები და მეთოდები მასივებზე</li>
+                        <li>ნავიგაციის გამოტანა ჯავასკრიპტიდან - სრულად</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="sillabusitem">
+                <div class="showsillabustheme flex" onclick="showtheme('theme14')">
+                    <p class="week">სემინარი 14 - ივენთები</p>
+                    <p class="arrow"><i class="fa-solid fa-chevron-down"></i></p>
+                </div>
+                <div class="theme"  id="theme14">
+                    <ul class="themelist">
+                        <li>მეთოდის შექმნა</li>
+                        <li>arrow function</li>
+                        <li>პარამეტრებიანი და უპარამეტრებო მეთოოდები</li>
+                        <li>events(onclick, focus,keydown)</li>
+                        <li>კალკულატორის გართულებული ვერსია</li>
+                        <li>burger bar-ის შექმნა და ფუნქციონალის გამართვა</li>
+                        <li>collapse შექმნა და გამართვა</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="sillabusitem">
+                <div class="showsillabustheme flex" onclick="showtheme('theme15')">
+                    <p class="week">სემინარი 15 - ობიექტები</p>
+                    <p class="arrow"><i class="fa-solid fa-chevron-down"></i></p>
+                </div>
+                <div class="theme"  id="theme15">
+                    <ul class="themelist">
+                        <li>ობიექტის შექმნა</li>
+                        <li>ობიექტის property</li>
+                        <li>this მიმთითებელი</li>
+                        <li>რესგისტრაცია/ავტორიზაციის მაგალითი</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="sillabusitem">
+                <div class="showsillabustheme flex" onclick="showtheme('theme16')">
+                    <p class="week">სემინარი 16 - dark mode / light mode</p>
+                    <p class="arrow"><i class="fa-solid fa-chevron-down"></i></p>
+                </div>
+                <div class="theme"  id="theme16">
+                    <ul class="themelist">
+                        <li>CSS ცვლადები</li>
+                        <li>dark mode/light mode ეფექტის გაკეთება ჯავასკრიპტის დახმარებით</li>
+                        <li>dark mode/light mode ეფექტის გმართვა HTML-დან</li>
+                        <li>დომეინისა და ჰოსტინგის გამოყენება</li>
+                        <li>საბოლოო პროექტების იდეების გენერირება</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="coursedetails">
+            <div class="coursedetailsinner flex">
+                <div class="coursedetailsitem flex">
+                    <p><i class="fa-regular fa-clock"></i></p>
+                    <p>კურსის ხანგრძლოვობა</p>
+                    <p>2 თვე</p>
+                    <p>16 სემინარი</p>
+                </div>
+
+                <div class="coursedetailsitem flex">
+                    <p><i class="fa-regular fa-calendar-days"></i></p>
+                    <p>განრიგი</p>
+                    <p>სამშაბათი (20:00 - 22:00) </p>
+                    <p>პარასკევი (20:00 - 22:00)</p>
+                </div>
+
+                <div class="coursedetailsitem flex">
+                    <p></p>
+                    <p>ღირებულება</p>
+                    <p class="courseprice">700₾</p>
+                    <p class="coursedetailsregisterbtton">
+                        <a href="courses.html">რეგისტრაცია</a>
+
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="freelectures flex">
+            <div>
+                <p>
+                    თუ გაინტერესებს როგორ ვხსნი მასალას, მაშინ
+                </p>
+
+                <p>
+                    უყურე <span>უფასო გაკვეთილს</span>, როგორ გადააქციო დიზაინი რეალურ გვერდად
+                </p>
+            </div>
+            <div class="freeyoutubevideo">
+
+                <iframe   src="https://www.youtube.com/embed/ud0_2dEBJS0"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+    </main>
+    <footer class="flex">
+        <div class="footerstart">
+            <div class="footerlogo">
+                <a href="index.html">WebCode Academy Web Development Courses</a>
+            </div>
+            <nav id="footernav"></nav>
+        </div>
+        <div class="footercontact">
+            <h2>კონტაქტი</h2>
+            <p>ბ.ჟღენტის 45, თბილისი</p>
+            <p>ტელ. <a href="tel: +995591682030">591682030</a> </p>
+            <p>ელ.ფოსტა: <a href="mailto: webcodeacademyinfo@gmail.com" target="_blank">
+                    webcodeacademyinfo@gmail.com
+                </a> </p>
+        </div>
+        <div class="follow">
+            <h2>გამომყევი</h2>
+            <div class="socialmedia flex">
+                <a href="#">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+            </div>
+        </div>
+        <p class="coursesbutton">
+            <a href="register.html"> კურსზე დარეგისტრირება</a>
+
+        </p>
+        <p class="arr"><i class="fa-regular fa-copyright"></i> ყველა უფლება დაცულია</p>
+        <p class="arr">2023 | თბილისი</p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+        integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://kit.fontawesome.com/389a230baf.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/darklight.js"></script>
+    <script src="js/showtheme.js"></script>
+    <script src="js/shownav.js"></script>
+    <script src="js/footernav.js"></script>
+</body>
+
+</html>

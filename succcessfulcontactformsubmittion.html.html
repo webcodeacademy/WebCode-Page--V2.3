@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" data-them="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script>
+        let localS = localStorage.getItem("Theme"),
+            themeToSet = localS
+        if (!localS) {
+            themeToSet = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+        }
+
+        document.documentElement.setAttribute("data-them", themeToSet)
+    </script>
+
+    <link rel="stylesheet" href="style/style.css">
+    <title>ვებკოდი | WebCode</title>
+    <link rel="icon" href="img/icony.png">
+</head>
+
+<body>
+    <script>var submitted = false</script>
+    <iframe name="hiddenConfirm" id="hiddenConfirm" style="display: none;"
+        onload="if(submitted){window.location='index.html';}"></iframe>
+    <header class="flex" id="header">
+        <h1>
+            <a href="index.html">
+                Webcode Academy ვებკოდი
+            </a>
+        </h1>
+        <div class="headerrightcorner flex">
+            <div class="navigation">
+                <div class="burgerbar flex" onclick="shownav()">
+                    <div class="burgerlines" id="bl1"></div>
+                    <div class="burgerlines bl2" id="bl2"></div>
+                    <div class="burgerlines bl3" id="bl3"></div>
+                </div>
+                <nav id="nav"></nav>
+            </div>
+            <div class="darklight" id="darklighticon"></div>
+        </div>
+    </header>
+    <main>
+        <div class="students">
+            <h2 class="coursepageh2">შეტყობინება წარმატებით გაიგზავნა</h2>
+            <div class="contactpagecontactinfo">
+                <p class="coursepagep">
+                    დაგიკავშრდებით შეტყობინებაში მითითებულ მეილზე
+            </p>
+            </div>
+
+
+        </div>
+    
+        <p><a href="index.html" class="morestudprojects">მთავარ გვერდზე დაბრუნება</a></p>
+    </main>
+    <footer class="flex">
+        <div class="footerstart">
+            <div class="footerlogo">
+                <a href="index.html">WebCode Academy Web Development Courses</a>
+            </div>
+            <nav id="footernav"></nav>
+        </div>
+        <div class="footercontact">
+            <h2>კონტაქტი</h2>
+            <p>ბ.ჟღენტის 45, თბილისი</p>
+            <p>ტელ. <a href="tel: +995591682030">591682030</a> </p>
+            <p>ელ.ფოსტა: <a href="mailto: webcodeacademyinfo@gmail.com" target="_blank">
+                    webcodeacademyinfo@gmail.com
+                </a> </p>
+        </div>
+        <div class="follow">
+            <h2>გამომყევი</h2>
+            <div class="socialmedia flex">
+                <a href="#">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+            </div>
+        </div>
+        <p class="coursesbutton">
+            <a href="register.html"> კურსზე დარეგისტრირება</a>
+
+        </p>
+        <p class="arr"><i class="fa-regular fa-copyright"></i> ყველა უფლება დაცულია</p>
+        <p class="arr">2023 | თბილისი</p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+        integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://kit.fontawesome.com/389a230baf.js" crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/tabs.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/darklight.js"></script>
+    <script src="js/shownav.js"></script>
+    <script src="js/footernav.js"></script>
+</body>
+
+</html>

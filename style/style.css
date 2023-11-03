@@ -1,0 +1,1898 @@
+@font-face {
+    font-family: mrgvlovani;
+    src: url(../fonts/bpg_mrgvlovani_2010.ttf);
+}
+@font-face {
+    font-family: mrgvlovanicaps;
+    src: url(../fonts/bpg_mrgvlovani_caps_2010.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: mrgvlovani;
+    text-align: justify;
+}
+.dark{
+    background: #000000;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+:root[data-them='light']{
+    --grey: #f8f8ff;
+    --mainimage: url(../img/bggrey.jpg);
+    --maintxtcolor: #010034;
+    --lightblue: #0400b2;
+    --lighterblue: #5f5dff;
+    --greylike: #f1f1f1;
+    --yellow: #ffd506;
+    --white: #ffffff;
+    --headingbackground: rgba(0, 0, 0, 0.2);
+    /* --logo: url(../img/bluelogo.png); */
+    --logo: url(../img/logo.gif);
+    /* --headerbackground: #01003400; */
+    /* --headerbackground: #f8f8ff; */
+    --headerbackground: #ffd506;
+    --toggleicon: url(../img/dark1.png);
+} 
+
+:root[data-them='dark']{
+    --grey: #010034;
+    /* --mainimage: url(../img/bluebg.jpg); */
+    --mainimage: url(../img/bluebg.jpg);
+
+    --maintxtcolor: #f8f8ff;
+    /* --maintxtcolor: #ffd506; */
+    --lightblue: #f1f1f1;
+    --lighterblue: #5f5dff;
+    --greylike: #010044;
+    --white: #000000;
+    /* --yellow: #4a0078; */
+    /* --yellow: #ffd506; */
+    --yellow: #7900a8;
+    --headingbackground: rgba(223, 223, 223, 0.2);
+    --logo: url(../img/darklogo.gif);
+    /* --headerbackground: #01003400; */
+    /* --headerbackground: #010034; */
+    --headerbackground: #000014;
+    --toggleicon: url(../img/light1.png);
+} 
+
+
+/* :root{
+    --grey: #010034;
+    --maintxtcolor: #f8f8ff;
+    --lightblue: #f1f1f1;
+    --lighterblue: #5f5dff;
+    --greylike: #010044;
+    --yellow: #ffd506;
+    --logo: url(../img/whitelogo.png);
+    
+} */
+body{
+    background-image: var(--mainimage);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+h1, .footerlogo{
+    width: 150px;
+    height: 30px;
+    background-image: var(--logo);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    text-indent: -9999999px;
+}
+h1 a, .footerlogo a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+p, button, a, h2, h3, h4{
+    color: var(--maintxtcolor);
+}
+/* header{
+    padding: 30px 300px;
+    font-family: mrgvlovanicaps;
+    width: 100%;
+    position: fixed;
+    top:0;
+    z-index: 50;
+    background: var(--headerbackground);
+    transition: 2s;
+
+} */
+
+.scrolled{
+    background: var(--grey);
+    box-shadow: 0 2px 2px var(--greylike);
+}
+.fabars i{
+    color: var(--maintxtcolor);
+    font-size: 26px;
+}
+.fabars{
+    display: none;
+}
+.notindex{
+    background: var(--grey);
+    box-shadow: 0 2px 2px var(--greylike);
+}
+.aboutmain{
+    padding-top: 150px;
+
+}
+/* header ul{
+    width: 800px;
+}
+header ul a{
+    padding: 40px 10px;
+    font-size: 14px;
+    color: var(--maintxtcolor);
+    font-family: mrgvlovanicaps;
+    font-weight: bold;
+}
+.socialmedia{
+    width: 200px;
+}
+.socialmedia a{
+    padding: 10px;
+    color: var(--lightblue);
+    font-weight: bold;
+}
+.socialmedia a:hover{
+    color: var(--yellow);
+} */
+
+
+
+
+
+/* ============== new header design START ======================= */
+
+header{
+    padding: 30px 300px;
+    font-family: mrgvlovanicaps;
+    width: 100%;
+    position: fixed;
+    top:0;
+    z-index: 50;
+    background: var(--grey);
+    transition: 2s;
+
+}
+.headerrightcorner{
+    width: 100px;
+}
+.burgerbar{
+    width: 30px;
+}
+.burgerbar.flex{
+    flex-direction: column;
+    align-items: flex-end;
+}
+.burgerlines{
+    width: 100%;
+    height: 3px;
+    background-color: var(--maintxtcolor);
+    transition: 0.5s;
+}
+.bl2{
+    width: 70%;
+    margin-top: 5px;
+}
+.bl3{
+    width: 50%;
+    margin-top: 5px;
+}
+.navigation{
+    position: relative;
+}
+#nav{
+    position: fixed;
+    background-color: var(--grey);
+    /* padding: 14px; */
+    border-radius: 50px;
+    top: 100px;
+    right: 0;
+    width: 0;
+    margin-right: 15%;
+    overflow: hidden;
+    transition: 0.5s;
+    height: 50px;
+    /* display: none; */
+}
+
+/* ============== new header design END ======================= */
+
+
+
+
+
+
+
+
+
+.darklight{
+    /* font-size: 30px;
+    cursor: pointer;
+    color: var(--lightblue); */
+    width: 30px;
+    height: 30px;
+    background-image: var(--toggleicon);
+    background-size: 100%;
+}
+.fa-bars{
+    color: var(--lightblue);
+    font-size: 24px;
+}
+.menubutton{
+    position: absolute;
+    top:30px;
+    right: 30px;
+    z-index: 100;
+    display: none;
+}
+.slider{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.studentsprojects .owl-theme .owl-nav{
+    margin: 0;
+    position: absolute;
+    top:40%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+}
+.studentsprojects .owl-theme .owl-nav.disabled+.owl-dots{
+    margin: 0;
+    position: absolute;
+    top:80%;
+    width: 100%;
+    margin: 0 auto;
+}
+.studentsprojects .owl-theme .owl-dots .owl-dot span{
+    background: var(--yellow);
+}
+.studentsprojects .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span{
+    background: var(--lightblue);
+}
+.owl-theme .owl-nav [class*=owl-]{
+    font-size: 80px!important;
+    color: var(--lightblue)!important;
+    transition: 0.5s;
+}
+.owl-theme .owl-nav [class*=owl-]:hover{
+    background: rgba(0, 0, 0, 0);
+    color: var(--yellow)!important;
+   
+}
+.reviews{
+    width: 100%;
+    padding: 50px;
+    /* background: var(--yellow); */
+    font-family: mrgvlovani;
+}
+.owl-review-carousel{
+    width: 90%;
+    margin: 0 auto;
+}
+.reviewitem{
+    /* width: 400px; */
+    padding: 0 40px;
+    text-align: justify;
+    color: var(--maintxtcolor);
+}
+.reviewitem .projectimage{
+    width: 100%;
+    height:220px;
+    overflow: hidden;
+    margin: 20px 0;
+}
+.reviewitem .projectimage, img{
+    width: 100%;
+}
+.reviews h2{
+    text-align: center;
+    margin-bottom: 60px;
+    color: var(--maintxtcolor);
+}
+.reviewitem p{
+    color: var(--maintxtcolor);
+    font-size: 12px;
+}
+.reviewitem .designline{
+    width: 60%;
+    height: 4px;
+    background: var(--lightblue);
+    margin: 20px 0 ;
+}
+.reviewitem .viewproject a{
+    display: block;
+    width: 100%;
+    padding: 12px;
+    text-align: center;
+    transition: 0.5s;
+    border: 2px solid var(--maintxtcolor);
+    margin: 20px 0;
+}
+.reviewitem .viewproject a:hover{
+    background-color: var(--maintxtcolor);
+    color: var(--grey);
+}
+.reviewitem  p.studentfullname{
+    font-size: 16px;
+}
+.reviewitem p.studentcourse{
+    font-size: 10px;
+}
+.reviewdate{
+    text-align: right;
+    margin-top: 20px;
+}
+.studentreviewtext{
+    height: 250px;overflow: hidden;
+}
+
+
+
+
+
+
+/* ============================= new review START ============================ */
+
+
+
+
+
+.studentsrevievs{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+.studentssay{
+    margin: 0 auto 40px auto;
+    width: 50%;
+    
+
+}
+.studentssay h2{
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.studentssay p{
+    font-size: 14px;
+    text-align: center;
+}
+.newreviewitem{
+    position: relative;
+    padding-top: 35px;
+}
+.reviewstudentphoto{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    z-index: 10;
+    left: 50%;
+    top: 0;
+    margin-left: -35px;
+    box-shadow:  0 3px 5px var(--headerbackground);
+    
+}
+.reviewinfo{
+    padding: 50px 20px 20px;
+    background-color: var(--grey);
+    border: 1px solid var(--greylike);
+    border-radius: 10px;
+    text-align: center;
+}
+.reviewinfo p{
+    text-align: center;
+}
+.reviewstudentphoto img{
+    width: 100%;
+}
+.reviewinfo h2{
+    margin: 30px 0 20px 0;
+    text-align: center;
+    font-size: 18px;
+}
+.reviewstudentcourse{
+    font-size: 12px;
+}
+
+.studentsrevievs .owl-carousel .owl-stage{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+/* ================================= new review END ====================== */
+
+
+
+
+/* ==================== student projects styles START ===================== */
+
+.studentsmain{
+    padding-top: 50px;
+}
+
+.studprojcontainer{
+    width: 70%;
+    margin: 0 auto 50px auto;
+}
+.studprojcontainer.flex{
+    flex-wrap: wrap;
+}
+.studprojcontitem{
+    width: 500px;
+    padding: 20px;
+    background-color: var(--grey);
+    margin-top: 20px;
+}
+.studprojimage{
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    position: relative;
+}
+.studprojimage::before{
+    content: "";
+    width: 50%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+
+.studprojcontitem:hover .studprojimage:before{
+
+    /* background-color: rgba(0, 0, 0, 0); */
+    width: 100%;
+    left: 100%;
+
+}
+
+.studprojimage img{
+    width: 100%;
+}
+.studprojtext p, .studprojtext h4{
+    text-align: center;
+}
+.studprojtext h4{
+    height: 50px;
+}
+.studprojcourse{
+    font-size: 12px;
+    color: var(--lightblue);
+}
+.studprojname{
+    margin: 20px 0;
+    font-size: 22px;
+}
+.stutprojstudname, .stutprojdate{
+    font-size: 12px;
+}
+.studprojlink, .morestudprojects{
+    display: block;
+    width: 50%;
+    margin: 20px auto 0 auto;
+    border: 1px solid var(--headerbackground);
+    background-color: var(--headerbackground);
+    font-size: 14px;
+    padding: 12px;
+    text-align: center;
+    transition: 0.5s;
+    border-radius: 5px;
+}
+.studprojlink:hover, .morestudprojects:hover{
+    background-color: var(--grey);
+}
+.morestudprojects{
+    width: 300px;
+    margin: 50px auto;
+}
+
+/* ==================== student projects styles END ===================== */
+
+
+
+
+
+
+
+
+
+.sumup{
+    background: var(--yellow);
+    width: 100%;
+    margin: 50px 0;
+}
+.sumupitem{
+    width: 400px;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+}
+.sumupitem p:nth-child(3){
+    font-size: 50px;
+    text-shadow: 0 0 1px var(--maintxtcolor);
+    --fa-animation-duration: 3s;
+    
+}
+.sumupitem p:nth-child(2){
+    font-size: 12px;
+}
+.sumupimage{
+    width: 100px;
+} 
+.sumupimage img{
+    width: 100%;
+}
+main{
+    padding-top: 200px;
+}
+
+.mainpagestart h2{
+    font-family: mrgvlovanicaps;
+    font-size: 32px;
+    width: 600px;
+    margin: 50px auto;
+    text-align: center;
+    line-height: 50px;
+}
+.mainpagestart .choosecourse{
+    font-size: 20px;
+    margin: 50px auto;
+}
+.mainpagestart h2 span{
+    font-family: mrgvlovanicaps;
+    font-size:32px;
+    font-weight: 800;
+    color: #d45f00;
+    text-decoration: underline;
+}
+.courses{
+    width: 70%;
+    margin: 100px auto;
+    align-items: flex-start;
+
+}
+.coursestext{
+    width: 100%;
+    text-align: justify;
+}
+.coursestext .mycourse{
+    display: block;
+    margin: 20px 0;
+    font-size: 16px;
+}
+.coursestext span{
+    display: block;
+    font-size: 18px;
+    line-height: 40px;
+    background-color: var(--lighterblue);
+    padding: 20px;
+    border-radius: 5px;
+    
+}
+.coursestext span:nth-child(even){
+    background-color: var(--greylike);
+}
+.coursestext span:nth-child(odd){
+    color: var(--greylike);
+}
+
+
+.coursestext h2, .greetingtext h2{
+    color: var(--maintxtcolor);
+    font-size: 16px;
+
+}
+.coursestext p{
+    color: var(--lightblue);
+    margin: 30px 0;
+    line-height: 30px;
+}
+.aboutme{
+    display: block;
+    padding: 20px;
+    border: 1px solid var(--maintxtcolor);
+    color: var(--maintxtcolor);
+    width: 100%;
+    text-align: center;
+    transition: 1s;
+}
+.aboutme:hover{
+    cursor: pointer;
+    background: var(--lightblue);
+    color: var(--yellow);
+}
+
+.courseslist{
+    width: 100%;
+    flex-wrap: wrap;
+}
+.courseitem{
+    width: 26%;
+    margin-bottom: 80px;
+    color:#010034
+}
+.courseimage{
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    margin: 20px 0;
+} 
+.courseimage img{
+    width: 100%;
+}
+.courseitem p{
+    font-size: 12px;
+    color: var(--lightblue);
+}
+.courseitem h2{
+    color: var(--maintxtcolor);
+}
+.btstrp{
+    background: var(--yellow);
+}
+.noindexmain{
+    padding: 200px;
+}
+.greeting, .bio, .about, .freelectures{
+    padding: 0 200px;
+    margin: 50px 0;
+}
+.freeyoutubevideo{
+    width: 560px;
+    height: 300px;
+    overflow: hidden;
+}
+.freeyoutubevideo iframe{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.greeting{
+    background-color: var(--headerbackground);
+    margin: 50px 0;
+    padding: 30px 200px;
+}
+.greetingtext{
+    width: 100%;
+    color: var(--maintxtcolor);
+
+}
+.greetingtext h2{
+    margin-bottom: 30px;
+}
+.greetingtext p{
+    width: 800px;
+    font-size: 14px;
+    color: var(--lightblue);
+    line-height: 30px;
+}
+.greetingvideo{
+    width: 300px;
+    height:300px;
+    overflow: hidden;
+}
+.greetingvideo video{
+    width: 100%;
+    margin-top: -100px;
+}
+.lecturerinfo.flex{
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.lecturer{
+    margin-left: 50px;
+}
+.lecturer p:first-child{
+    font-size: 22px;
+    counter-reset: var(--lighterblue);
+}
+.lecturer p:last-child{
+    margin-top: 50px;
+}
+.about{
+    align-items: flex-start;
+    margin: 100px auto;
+}
+.about h2{
+    color: var(--maintxtcolor);
+    margin-bottom: 30px;
+    font-size: 18px;
+}
+.biotext{
+    width: 500px;
+}
+.biotext p{
+    margin-bottom: 20px;
+}
+.biotext ul{
+    margin: 100px 0;
+}
+.biotext ul li{
+    margin: 40px 0;
+    font-weight: bold;
+    color: var(--maintxtcolor);
+}
+.biotext ul li a{
+    display: block;
+    font-weight: 400;
+    color: var(--lightblue);
+    text-decoration: underline;
+    
+}
+.lecturerbio.flex{
+    align-items: flex-start;
+}
+.education{
+    width: 500px;
+    color: var(--maintxtcolor);
+}
+.educationitem{
+    margin-bottom: 50px;
+}
+.educatoinline{
+    width: 70%;
+    height: 4px;
+    background: var(--lightblue);
+    margin-bottom: 10px;
+}
+.educationitem p{
+    margin-top: 10px;
+}
+.educationitem h3{
+    color: var(--lightblue);
+}
+.freelectures p{
+    margin-bottom: 30px;
+    color: var(--maintxtcolor);
+}
+.freelectures p:nth-child(2){
+    font-size: 18px;
+}
+.freelectures p:nth-child(2) span{
+    font-weight: bold;
+    font-size: 20px;
+    color: var(--maintxtcolor);
+    /* text-shadow: 0 0 5px var(--yellow); */
+    border: 2px solid var(--yellow);
+    padding: 5px;
+    border-radius: 5px;
+}
+.aboutregisteroncourse{
+    background: var(--yellow);
+    padding: 100px 200px 50px 200px;
+    margin: 100px 0;
+}
+.aboutregisteroncourse p.daeufle{
+    font-size: 16px;
+    text-align: center;
+    width: 70%;
+    margin: 0 auto;
+    line-height: 40px;
+}
+.aboutregisteroncourse h2{
+    font-family: mrgvlovanicaps;
+    font-size: 22px;
+    text-align: center;
+}
+.aboutregisteroncourse h3{
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: center;
+}
+.coursesbutton a, .materclassbutton a{
+    display: block;
+    padding: 14px;
+    width: 200px;
+    text-align: center;
+    margin: 50px auto;
+    border: 1px solid var(--headerbackground);
+    background-color: var(--headerbackground);
+    color: var(--maintxtcolor);
+    transition: 1s;
+    border-radius: 5px;
+}
+.materclassbutton a{
+    width: 100%;
+}
+.coursesbutton a:hover, .materclassbutton a:hover{
+    background: var(--grey);
+    cursor: pointer;
+}
+.coursespage, .students{
+    padding: 100px 0 200px 0;
+    margin: 50px 0;
+    background: var(--yellow);
+    position: relative;
+}
+.students{
+    padding: 100px 0 100px 0;
+}
+.coursepageh2{
+    color: var(--maintxtcolor);
+    text-align: center;
+    margin: 20px 0;
+    letter-spacing: 5px;
+}
+.coursepagep{
+    color: var(--lightblue);
+    text-align: center;
+}
+.seemasterclass, .seecoursesdetails{
+    width: 40%;
+}
+.masterclassthemes ul li{
+    color: var(--maintxtcolor);
+}
+.coursepagep span, .seemasterclass span{
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid var(--lightblue);
+}
+.coursespagelist{
+    width: 70%;
+    padding-bottom: 50px;
+    position: absolute;
+    top:60%;
+    left: 50%;
+    margin-left: -35%;
+    background: var(--greylike);
+
+}
+.studentprojectimages{
+    width: 100%;
+}
+
+/* Style the tab */
+.tab{
+    width: 80%;
+    overflow: hidden;
+    border-bottom: 1px solid var(--maintxtcolor);
+    margin: 0 auto;
+  }
+  
+  /* Style the buttons inside the tab */
+  .tab button {
+    background: inherit;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+  }
+  
+  /* Change background color of buttons on hover */
+  .tab button:hover {
+    background: var(--yellow);
+  }
+  
+  /* Create an active/current tablink class */
+  .tab button.active {
+    background: var(--yellow);
+  }
+  
+  /* Style the tab content */
+  .tabcontent {
+    display: none;
+  }
+
+.tabcont{
+    display: block;
+}
+.coursecontainer{
+    width: 80%;
+    
+    margin: 30px auto;
+    border: 1px solid var(--maintxtcolor);
+    align-items: flex-start;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: 1s;
+}
+.studprojcontainer{
+    width: 80%;
+}
+.coursecontainer:hover{
+    box-shadow: 0 0 5px var(--maintxtcolor);
+}
+
+.coursecontainerimage{
+    width: 70%;
+    height: 500px;
+    overflow: hidden;
+}
+.coursecontainerimage img{
+    width: 100%;
+}
+.coursetext{
+    width: 25%;
+    padding-right: 20px;
+}
+.coursetext h2{
+    color: var(--maintxtcolor);
+}
+.coursecontainer h2{
+    font-size: 16px;
+    margin: 20px 20px 10px 0;
+    text-align: left;
+    color: var(--maintxtcolor);
+    
+}
+.coursecontainer h2 a{
+    color: var(--maintxtcolor);
+}
+.coursecontainer h2 a:hover{
+    text-shadow: 2px 2px var(--yellow);
+    text-decoration: underline;
+
+}
+.coursecontainer .price{
+    margin: 50px 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+.surati{
+    transition: 1s;
+}
+.coursecontainer:hover .surati{
+    transform: scale(1.1);
+}
+.register a{
+    display: block;
+    width: 90%;
+    padding: 14px;
+    border: 1px solid var(--maintxtcolor);
+    text-align: center;
+    color: var(--maintxtcolor);
+    border-radius: 10px;
+    transition: 1s;
+}
+.register a:hover{
+    background: var(--yellow);
+}
+.tabcontent .groups{
+    width: 80%;
+    margin: 80px auto 10px auto;
+}
+.masterclass .price{
+    font-weight: bolder;
+    margin:30px 0;
+    letter-spacing: 5px;
+}
+.studentsprojects{
+    flex-wrap: wrap;
+}
+
+footer.flex{
+    background: var(--headerbackground);
+    padding: 100px 200px;
+    align-items: flex-start;
+   
+}
+
+footer div h2{
+    margin-bottom: 20px;
+    font-size: 20px; 
+    color: var(--lightblue);
+}
+footer div p{
+    margin-bottom: 10px;
+}
+.footerstart nav li{
+    margin: 15px 0;
+}
+footer .coursesbutton a{
+    background: var(--maintxtcolor);
+    color: var(--yellow);
+    border: 1px solid var(--maintxtcolor);
+    border-radius: 5px;
+}
+footer .coursesbutton a:hover{
+    background: var(--yellow);
+    color: var(--maintxtcolor);
+}
+.coursesbody footer{
+    margin-top: 694px;
+}
+footer .follow .socialmedia a{
+    font-size: 18px;
+    border: 1px solid rgba(0, 0, 0, 0);
+    padding: 5px;
+}
+footer .follow .socialmedia a:hover{
+    color: var(--lightblue);
+    border: 1px solid var(--lightblue);
+}
+footer .arr{
+    width: 100%;
+    text-align: center;
+}
+.webcodeschool{
+    width: 50%;
+    margin: 150px auto;
+}
+.webcodeschool h2{
+    color: var(--maintxtcolor);
+    margin-bottom: 20px;
+}
+.webcodeschool p{
+    color: var(--lightblue);
+    margin-bottom: 20px;
+}
+.webcourseitem{
+    flex-direction: column;
+    width: 70%;
+    margin: 0 auto;
+}
+.coursedetails{
+    width: 100%;
+    padding: 100px 0;
+    background-color: var(--headerbackground);
+}
+.coursedetailsinner{
+    width: 70%;
+    margin: 0 auto;
+}
+.coursedetailsinner.flex{
+    align-items: flex-start;
+}
+.coursedetailsitem.flex{
+    flex-direction: column;
+}
+.coursedetailsitem p:first-child{
+    font-size: 30px;
+}
+
+.coursedetailsitem p:nth-child(2){
+    margin: 20px 0;
+}
+.courseprice{
+    font-size: 30px;
+}
+.coursedetailsregisterbtton a{
+    display: block;
+    margin: 50px 0;
+    padding: 12px;
+    border-radius: 15px;
+    border: 1px solid var(--maintxtcolor);
+    color: var(--headerbackground);
+    background-color: var(--maintxtcolor);
+    transition: 1s;
+}
+.coursedetailsregisterbtton a:hover{
+    background-color: var(--headerbackground);
+    color: var(--maintxtcolor);
+}
+.coursedetailsbutton a{
+    display: block;
+    width: 20%;
+    margin: 50px auto;
+    text-align: center;
+    padding: 12px;
+    border-radius: 15px;
+    border: 1px solid var(--maintxtcolor);
+    color: var(--headerbackground);
+    background-color: var(--maintxtcolor);
+    transition: 1s;
+}
+.coursedetailsbutton a:hover{
+    background-color: var(--headerbackground);
+    color: var(--maintxtcolor);
+}
+.webc1{
+    width: 100%;
+    height: 400px;
+    background-image: url(../img/online.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: relative;
+    border-radius: 5px;
+}
+.headingcover{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left: 0;
+    background: var(--headingbackground);
+    z-index: 0;
+    justify-content: center;
+    border-radius: 5px;
+}
+.webcprice{
+    padding: 20px;
+    height: 150px;
+    background: var(--yellow);
+    position: relative;
+    transform: rotate(-10deg);
+    margin-top: -50px;
+    z-index: 10;
+    border-radius: 5px;
+}
+.webcprice li{
+    margin-bottom: 14px;
+    color: var(--maintxtcolor);
+}
+.pin{
+    width: 30px;
+    height: 30px;
+    background-image: url(../img/push-pin.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top:-10px;
+    right:-10px;
+}
+.gotolink{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left: 0;
+    background: var(--headingbackground);
+    z-index: 2;
+    display: none;
+}
+.gotolink a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.webc1:hover .gotolink{
+    display: block;
+}
+.webc2{
+    background-image: url(../img/offline.jpg);
+}
+.webc3{
+    background-image: url(../img/corp.jpg);
+}
+.webcourseitem h2{
+    color: var(--maintxtcolor);
+    background-color: var(--yellow);
+    border-radius: 5px;
+}
+.webcourses{
+    margin-bottom: 100px;
+}
+.aboutbeforefooterblock li{
+    margin-bottom: 20px;
+}
+.aboutbeforefooterblock{
+    width: 100%;
+    padding: 100px 200px;
+}
+.aboutbeforefooterblock h2{
+    text-align: center;
+    color: var(--maintxtcolor);
+    margin-bottom: 80px;
+}
+.aboutbeforefooterblockflex.flex{
+    align-items: flex-start;
+}
+.seemasterclass h3, .seecoursesdetails h3{
+    margin-bottom: 40px;
+}
+.seemasterclass li{
+    color: var(--maintxtcolor);
+}
+.seecoursesdetailsitem{
+    margin-top: 80px;
+}
+.seecoursesdetailsitem span{
+    font-weight: 700;
+}
+.studentvrclad{
+    font-size: 12px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0);
+   
+}
+.studentvrclad:hover{
+    border-bottom: 1px solid var(--maintxtcolor);
+    transition: 0.5s;
+}
+.studentsthoughtscontainer{
+    width: 45%;
+}
+.studentsthoughtscontainer .coursetext{
+    padding: 20px;
+}
+.studentsthoughtscontainer .coursetext h3{
+    margin-bottom: 20px;
+}
+.studentsthoughtscontainer .coursetext p{
+    font-size: 12px;
+}
+.studentsthoughtscontainer .coursetext .projectofstident a{
+    display: block;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid var(--maintxtcolor);
+    margin-top: 20px;
+    transition: 1s;
+}
+.studentsthoughtscontainer .coursetext p a:hover{
+    color: var(--yellow);
+    background: var(--maintxtcolor);
+}
+.thoughtscontainer h2{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.studentsthoughtshidden{
+    display: none;
+}
+.thoughtscontainer .readmore{
+    width: 300px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid var(--maintxtcolor);
+    color: var(--maintxtcolor);
+    transition: 1s;
+    cursor: pointer;
+}
+.thoughtscontainer .readmore:hover{
+    color: var(--yellow);
+    background: var(--maintxtcolor);
+}
+
+/*----- register styles ----- */
+.register{
+    width: 100%;
+    margin: 50px auto;
+    
+}
+.register div{
+    border: 1px solid var(--maintxtcolor);
+    padding-top: 10px;
+    text-align: left;
+}
+.register div:nth-child(odd){
+    background: var(--yellow);
+}
+.register input, .register textarea{
+    width: 100%;
+    padding: 14px;
+    border: none;
+    /* border-bottom: 1px solid var(--maintxtcolor); */
+    background: rgba(0, 0, 0, 0.1);
+    outline: none;
+    margin-top: 10px;
+    color: var(--lightblue);
+}
+.register textarea{
+    height: 300px;
+    resize: none;
+}
+.register label{
+    width: 100%;
+    color: var(--maintxtcolor);
+    margin:10px;
+    text-align: left;
+}
+.register button{
+    width: 50%;
+    padding: 14px;
+    text-align: center;
+    background: var(--yellow);
+    border: none;
+    border: 1px solid var(--maintxtcolor);
+    color: var(--maintxtcolor);
+    margin: 20px auto;
+    font-size: 18px;
+    transition: 1s;
+}
+.register button:hover{
+    cursor: pointer;
+    background: var(--maintxtcolor);
+    color: var(--yellow);
+
+}
+.regform{
+    width: 40%;
+}
+.reginfo{
+    width: 40%;
+}
+.registrebox.flex{
+    align-items: flex-start;
+    justify-content: space-around;
+}
+.map{
+    width: 100%;
+    height: 250px;
+}
+.map iframe{
+    width: 100%;
+    height: 100%;
+}
+.reginfo h3, .reginfo h4{
+    margin: 30px 0 20px 0;
+}
+.reginfo ul li{
+    margin: 10px 0;
+    color: var(--maintxtcolor);
+}
+
+.mentors{
+    width: 80%;
+    margin: 30px auto;
+    
+}
+
+.mentoritem{
+    width: 340px;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: var(--white);
+    position: relative;
+    transition: 1s;
+    margin: 0 auto;
+}
+.mentorimage{
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    
+}
+.mentorimage img{
+    width: 100%;
+}
+.linktomentor{
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.mentoritem h2{
+    font-size: 16px;
+    margin: 20px 0;
+    color: var(--maintxtcolor);
+}
+.mentoritem h3, .mentoritem p{
+    color: var(--maintxtcolor);
+}
+.mentoritem:hover{
+    border-radius: 0px;
+    box-shadow: 0 10px 10px var(--maintxtcolor);
+}
+.coursedesc{
+    text-align: center;
+}
+
+.coursedescription{
+    padding: 30px 200px;
+    margin-bottom: 50px;
+}
+.coursedescription h2{
+    margin-bottom: 20px;
+    text-align: center;
+}
+.coursedescription .silabusi{
+    margin-bottom: 60px;
+    letter-spacing: 5px;
+}
+.sillabusitem{
+    border: 2px solid var(--lighterblue);
+    border-radius: 5px;
+}
+.showsillabustheme{
+    width: 100%;
+    padding: 20px;
+    background-color: var(--lightblue);
+
+}
+.showsillabustheme p{
+    color: var(--grey);
+    font-size: 16px;
+    font-family: mrgvlovanicaps;
+}
+.showsillabustheme:hover{
+    background-color: var(--lighterblue);
+    cursor: pointer;
+}
+.theme{
+    /* padding: 20px; */
+    height: 0px;
+    overflow: hidden;
+    transition: all linear 0.5s;
+    background-color: var(--greylike);
+}
+.theme li{
+    color: var(--maintxtcolor);
+}
+.theme .themelist{
+    padding: 40px;
+}
+.theme .themelist li{
+    list-style-type: disc;
+    padding: 10px 0;
+}
+.courseinfo{
+    margin: 20px 0;
+}
+.courseinfo p{
+    font-size: 16px;
+    font-weight: 500;
+}
+.courseinfo span{
+    font-size: 12px;
+    font-weight: 400;
+}
+.successfulregistration{
+    background-color: var(--headerbackground);
+    padding: 100px 200px;
+}
+.masterclassthemes h2{
+    margin-bottom: 50px;
+}
+.masterclassthemes ul li{
+    line-height: 50px;
+}
+.allprojects{
+    text-align: center;
+}
+.contactpagecontactinfo p{
+    text-align: center;
+    padding: 14px;
+}
+
+.webcodestudexperience{
+    height: 300px;
+}
+
+.aboutmasterclassinfo input{
+    width: 5%;
+}
+.aboutmasterclassinfo input{
+    width: 5%;
+}
+/* ===============================================
+
+
+design break at 1024
+tablet 
+
+
+===================================================*/
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 1024px) {
+    header{
+        width: 100%;
+        padding: 50px 100px;
+        overflow: hidden;
+    }
+   
+    header #nav{
+        top:150px;
+        height: 400px;
+        margin-right: 0;
+    }
+    header ul.flex{
+        flex-direction: column;
+    }
+    
+    header #nav ul li a{
+        font-size: 30px;
+        line-height: 60px;
+    }
+    .headerrightcorner{
+        width: 70px;
+    }
+    .webcourseitem h2{
+        font-size: 34px;
+    }
+
+    .webcprice{
+        height: 170px;
+    }
+    .coursedetailsinner.flex{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .coursedetailsitem p:first-child{
+        font-size: 50px;
+    }
+    .coursedetailsinner .coursedetailsitem:first-child, .coursedetailsinner .coursedetailsitem:nth-child(2){
+        padding-bottom: 30px;
+        padding-top: 30px;
+        border-bottom: 1px solid var(--maintxtcolor);
+    }
+    .coursedetailsregisterbtton a{
+        padding: 20px 100px;
+    }
+
+    /*  ==========================================
+    font size  START
+    ============================================= */
+   
+    .sumupitem p:nth-child(2), .studprojcourse, .stutprojstudname, .stutprojdate{
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .courseinfo p span,   .webcprice li, .aboutregisteroncourse p.daeufle, .studentssay p, .reviewinfo p, .coursepagep, .seemasterclass li, .materclassbutton a, .seecoursesdetailsitem, .footerstart nav li a, .lecturer p:last-child, .biotext p, .educationitem p, .courseitem p, .showsillabustheme p, .theme .themelist li, .freelectures p, .register label{
+        font-size: 24px;
+    }
+
+    .courseinfo p, .mentoritem h2, .coursestext .mycourse,  .coursestext span,   .coursestext p,   .coursedetailsitem p, .aboutregisteroncourse h3, .reviewinfo h2, .biotext ul li, .freelectures p:nth-child(2){
+        font-size: 26px;
+    }
+    .studprojtext h4, .seemasterclass h3, .seecoursesdetails h3, .about h2, .educationitem h3{
+        font-size: 28px;
+    }
+    .coursestext h2, .greetingtext h2, .studentssay h2, .coursepageh2, .aboutbeforefooterblock h2, .lecturer p:first-child, .courseitem h2, .coursedescription h2, .freelectures p:nth-child(2) span{
+        font-size: 30px;
+    }
+
+    .mentoritem h3, .aboutregisteroncourse h2{
+        font-size: 32px;
+    }
+
+    /*  ==========================================
+    font size  END
+    ============================================= */
+
+
+
+    .mentoritem{
+        width: 640px;
+    }
+    .mentorimage{
+        width: 600px;
+        height: 600px;
+    }
+    .sumupitem{
+        margin: 30px auto;
+    }
+    .aboutregisteroncourse{
+        padding: 100px;
+    }
+    .aboutregisteroncourse p.daeufle{
+        width: 100%;
+    }
+
+    .sumup{
+        width: 50%;
+        margin: 0 auto;
+    }
+    .coursedetailsbutton a{
+        width: 100%;
+        font-size: 26px;
+    }
+    .studentssay{
+        width: 100%;
+    }
+    .studprojcontitem{
+        margin: 20px auto;
+        width: 100%;
+    }
+    .studprojimage{
+        height: 370px;
+    }
+    .studprojlink, .morestudprojects{
+        width: 100%;
+        padding: 20px;
+        font-size: 24px;
+    }
+    .morestudprojects{
+        width: 80%;
+        padding: 40px;
+    }
+    .aboutbeforefooterblock{
+        padding: 100px;
+    }
+    .seemasterclass{
+        width: 100%;
+    }
+    h1, .footerlogo{
+        width: 250px;
+        height: 50px;
+    }
+
+
+
+    /* ----- footer styles start  point------- */
+    footer{
+        padding: 100px;
+    }
+    footer.flex{
+        flex-direction: column;
+        align-items: center;
+        padding: 100px 0;
+    }
+    footer div{
+        margin-bottom: 30px;
+        
+    }
+    footer div h2{
+        text-align: center;
+        font-size: 30px;
+    }
+    footer div p, footer .arr{
+        text-align: center;
+        font-size: 26px;
+    }
+    footer .follow .socialmedia a{
+        font-size: 38px;
+        padding: 20px;
+    }
+    .footerlogo{
+        margin: 0 auto;
+    }
+    .footerstart nav li{   
+        text-align: center;
+    }
+    footer .coursesbutton a{
+        width: 100%;
+        padding: 20px;
+        font-size: 26px;
+    }
+    /* ----- footer styles end  point------- */
+
+
+
+
+
+    /* =====================================================
+    webdev page styles  START
+    ===================================================== */
+
+
+    .aboutmain{
+        padding-top: 200px;
+    }
+    .greeting{
+        padding: 30px 100px;
+    }
+    .greetingvideo{
+        width: 500px;
+        height: 500px;
+        margin: 0 auto;
+    }
+    .lecturer{
+        margin-left: 0;
+        margin-top: 30px;
+    }
+    .lecturer p:last-child, .lecturer p:first-child{
+        text-align: center;
+    }
+    .bio, .about, .coursedescription, .freelectures{
+        padding:0 100px;
+        width: 100%;
+    }
+    .education, .biotext{
+        width: 100%;
+    }
+    .courseitem{
+        width: 100%;
+    }
+    .theme{
+        overflow-y: scroll;
+    }
+    .freeyoutubevideo{
+        width: 100%;
+        height: 400px;
+        margin: 50px auto;
+    }
+
+    /* =====================================================
+    webdev page styles  END
+    ===================================================== */
+
+
+
+
+
+    /* ========================================================
+    register page styles START 
+    ======================================================== */
+    
+    
+    .registrebox.flex{
+        flex-direction: column;
+        align-items: center;
+    }
+    .regform, .reginfo{
+        width: 90%;
+    }
+    .register input{
+        padding: 20px 14px;
+        font-size: 24px;
+    }
+    .register button{
+        width: 100%;
+        padding: 20px;
+        font-size: 24px;
+        text-align: center;
+    }
+    .regform h2, .reginfo h2{
+        text-align: center;
+        font-size: 28px;
+    }
+    .reginfo ul li{
+        text-align: center;
+        font-size: 24px;
+    }
+    .coursesbutton a{
+        width: 100%;
+        padding: 20px;
+        font-size: 24px;
+        text-align: center;
+    }
+    .masterclassthemes ul li{
+        font-size: 24px;
+    }
+    .masterclassthemes{
+        width: 90%;
+        margin: 50px auto;
+    }
+
+}
+
+
+@media only screen and (max-width: 640px) {
+
+
+    /* ===================================================
+    font size START 
+    ====================================================== */
+
+    .courseinfo p span,   .webcprice li, .aboutregisteroncourse p.daeufle, .studentssay p, .reviewinfo p, .coursepagep, .seemasterclass li, .materclassbutton a, .seecoursesdetailsitem, .footerstart nav li a, .lecturer p:last-child, .biotext p, .educationitem p, .courseitem p, .showsillabustheme p, .theme .themelist li, .freelectures p, .register label, .sumupitem p:nth-child(2),.studprojcourse{
+        font-size: 12px;
+    }
+
+    .courseinfo p, .mentoritem h2, .coursestext .mycourse,  .coursestext span,   .coursestext p,   .coursedetailsitem p, .aboutregisteroncourse h3, .reviewinfo h2, .biotext ul li, .freelectures p:nth-child(2), .stutprojstudname, .stutprojdate, .studprojlink, .morestudprojects, header #nav ul li a, .masterclassthemes ul li{
+        font-size: 14px;
+    }
+    .studprojtext h4, .seemasterclass h3, .seecoursesdetails h3, .about h2, .educationitem h3, .webcourseitem h2, .mainpagestart h2, .reginfo ul li{
+        font-size: 16px;
+    }
+    .coursestext h2, .greetingtext h2, .studentssay h2, .coursepageh2, .aboutbeforefooterblock h2, .lecturer p:first-child, .courseitem h2, .coursedescription h2, .freelectures p:nth-child(2) span, .masterclassthemes h2,.register button, .regform h2, .reginfo h2, .coursesbutton a{
+        font-size: 18px;
+    }
+
+    .mentoritem h3, .aboutregisteroncourse h2{
+        font-size: 20px;
+    }
+
+  
+     /* ===================================================
+    font size END 
+    ====================================================== */
+
+    header{
+        padding: 20px;
+    }
+    header #nav{
+        top:70px;
+        height: 270px;
+    }
+    header #nav ul li a{
+        line-height: 40px;
+    }
+    .mainpagestart h2{
+        width: 90%;
+    }
+    .webcourseitem{
+        width: 90%;
+    }
+    .webc1 {
+        height: 230px;
+    }
+    .webcprice{
+        height: 140px;
+    }
+    .coursedetailsitem p:first-child{
+        font-size: 20px;
+    }
+    .mentoritem{
+        width: 100%;
+    }
+    .mentorimage{
+        width: 100%;
+        height: 260px;
+    }
+    .sumupimage{
+        width: 40px;
+    }
+    .aboutregisteroncourse{
+        padding: 20px;
+    }
+    .studprojimage {
+        height: 130px;
+    }
+    .seecoursesdetailsitem {
+        margin-top: 20px;
+    }
+    .seecoursesdetails{
+        width: 100%;
+    }
+    h1, .footerlogo{
+        width: 150px;
+        height: 30px;
+    }
+    footer div h2{
+        font-size: 14px;
+    }
+    footer div p{
+        font-size: 12px;
+    }
+    footer .coursesbutton a{
+        width: 90%;
+        font-size: 16px;
+    }
+    footer .arr{
+        font-size: 10px;
+    }
+    .coursedetailsregisterbtton a{
+        padding: 20px 50px;
+    }
+    .aboutbeforefooterblock{
+        padding: 50px;
+    }
+    .greetingtext p{
+        width: 100%;
+    }
+    .greeting, .bio, .about, .coursedescription, .freelectures{
+        padding: 30px;
+    }
+    .freelectures p:nth-child(2), .seemasterclass h3, .coursepagep{
+        line-height: 40px;
+    }
+    .register input{
+        font-size: 12px;
+        padding: 12px;
+    }
+}
