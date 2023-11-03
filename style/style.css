@@ -1885,7 +1885,7 @@ tablet
     .greetingtext p{
         width: 100%;
     }
-    .greeting, .bio, .about, .coursedescription, .freelectures{
+    .greeting, .bio, .about, .coursedescription, .freelectures, .successfulregistration{
         padding: 30px;
     }
     .freelectures p:nth-child(2), .seemasterclass h3, .coursepagep{
